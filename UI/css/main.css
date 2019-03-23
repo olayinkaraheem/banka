@@ -1,0 +1,205 @@
+/* Declaring all global vaiables */
+:root {
+    --blue:  #140A25;
+    --purple: #400D2A;
+    --light-purple: #5A142A;
+    --lighter-purple: #8F1D2C;
+    --red: #DB2B30;
+    --white: #fff;
+}
+
+/* Re-setting all default values */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Common element styles */
+body {
+    background-color: var(--blue);
+    color: var(--white);
+    width: 100vw;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+form {
+    border-radius: 5px;
+    box-shadow: 0 0 2px #fff;
+    background-color: transparent;
+    max-width: 30vw;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+input {
+    margin: 5px 0;
+}
+
+.form-input-field {
+    background-color: transparent;
+    font-style: italic;
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-bottom: 1px solid #E0E0E0;
+    color: var(--white);
+}
+
+/* Navigation/Header Styles */
+
+header {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    /* align-content: center; */
+    text-transform: capitalize;
+    height: 10vh;
+    background-color: var(--purple);
+}
+
+#menu-icon {
+    display: none;
+}
+
+.navigation ul {
+    list-style-type: none;
+}
+
+.navigation ul li {
+    display: inline-block;
+}
+
+#brand-name, .navigation ul li a {
+    display: inherit;
+    padding: 10px;
+    text-decoration: none;
+    color: var(--white);
+}
+
+/* Landing Page Styles */
+#main section #welcome {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 80vh;
+}
+
+#main  {
+    text-align: center;
+}
+
+#welcome-header {
+    margin-bottom: 15px;
+    padding: 15px;
+    font-size: 1.5em;
+}
+
+/* Signup/Login pages styles */
+    section #form-container {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        height: 80vh;
+    }
+
+    form p {
+        margin-top: 20px;
+    }
+
+    form a  {
+        color: var(--lighter-purple);
+        align-self: right;
+    }
+
+/* Buttons styles */
+.btn {
+    border-radius: 5px;
+    padding: 5px;
+    border: .5px solid var(--red);
+    background-color: var(--light-purple);
+}
+
+.large-btn {
+    padding: 10px;
+    font-size: 110%;
+}
+
+.btn-full-width {
+    width: 100%;
+}
+
+/* Misc Styles */
+.visible {
+    display: block;
+}
+
+/* SMART PHONES PORTRAIT */
+@media only screen and (min-width: 320px) and (max-width: 800px) {
+
+    form {
+        border-radius: 5px;
+        box-shadow: 0 0 2px #fff;
+        background-color: transparent;
+        max-width: 90vw;
+        padding: 10px;
+    }
+
+    input {
+        margin: 5px 0;
+    }
+
+    .form-input-field {
+        background: transparent;
+        font-style: italic;
+        padding: 10px;
+        width: 100%;
+    }
+
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: var(--purple);
+    }
+    
+    #menu-icon {
+        /* align-self: flex-end; */
+        display: block;
+    }
+    
+    .navigation {
+        background-color: var(--lighter-purple);
+        display: flex;
+        display: none;
+        width: 100%;
+        text-align: center;
+        position: fixed;
+    }
+    
+    .navigation ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navigation ul li {
+        padding: 10px;
+        color: var(--white);
+    }
+
+    #main {
+        height: 80vh;
+    }
+
+    .visible {
+        display: block;
+    }
+}
