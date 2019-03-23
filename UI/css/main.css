@@ -52,6 +52,7 @@ input {
     border-left: 0;
     border-bottom: 1px solid #E0E0E0;
     color: var(--white);
+    max-height: 10vh;
 }
 
 /* Navigation/Header Styles */
@@ -60,7 +61,7 @@ header {
     display: flex;
     flex-flow: row;
     justify-content: space-between;
-    /* align-content: center; */
+    align-content: center;
     text-transform: capitalize;
     height: 10vh;
     background-color: var(--purple);
@@ -85,17 +86,33 @@ header {
     color: var(--white);
 }
 
-/* Landing Page Styles */
-#main section #welcome {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 80vh;
+footer {
+    background-color: var(--purple);
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    padding: 10px;
+    height: 10vh;
 }
 
 #main  {
     text-align: center;
+    height: 80vh;
+}
+
+/* Landing Page Styles */
+#main section#welcome {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    height: inherit;
+}
+
+#main a{
+    width: fit-content;
+    align-self: center;
 }
 
 #welcome-header {
@@ -105,21 +122,20 @@ header {
 }
 
 /* Signup/Login pages styles */
-    section #form-container {
-        display: flex;
-        align-content: center;
-        justify-content: center;
-        height: 80vh;
-    }
+section #form-container {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
 
-    form p {
-        margin-top: 20px;
-    }
+form p {
+    margin-top: 20px;
+}
 
-    form a  {
-        color: var(--lighter-purple);
-        align-self: right;
-    }
+form a  {
+    color: var(--lighter-purple);
+    align-self: right;
+}
 
 /* Buttons styles */
 .btn {
@@ -168,6 +184,7 @@ header {
     header {
         display: flex;
         flex-wrap: wrap;
+        align-content: center;
         background-color: var(--purple);
     }
     

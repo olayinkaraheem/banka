@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Banka- Index</title>
+    <title>Banka- Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
 </head>
@@ -31,9 +31,14 @@
     <!-- **/ HEADER SECTION HEADS -->
     <!-- MAIN SECTION STARTS -->
     <main id="main">
-        <section id="welcome">
-            <h2 id="welcome-header">Welcome to Banka</h2>
-            <a href="signup.html" class="btn large-btn">Click Here To Begin</a>
+        <section id="form-container">
+            <h2 id="welcome-header">Login</h2>
+            <form id="signup-form" method="post" action="after-signup.html">
+                <input type="email" class="form-input-field" placeholder="Enter your email">
+                <input type="password" class="form-input-field" placeholder="Enter your password">
+                <button type="submit" class="btn btn-full-width large-btn">Proceed</button>
+                <p>Not registered yet? <a href="signup.html">Signup</a></p>
+            </form>
         </section>
     </main>
     <!-- MAIN SECTION ENDS -->
