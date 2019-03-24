@@ -36,55 +36,81 @@
             <form id="account-form" method="post" action="bank-account-dashboard.html">
                 <fieldset>
                     <legend> Basic information </legend>
-                    <!-- 
-                        nok, occupation, 
-                        account type, state of origin, 
-                        res add, nationality, 
-                        form of id, gender, 
-                        religion, dob -->
-                    <input type="text" name="firstname" class="form-input-field" placeholder="Enter your firstname" required>
-                    <input type="text" name="lastname" class="form-input-field" placeholder="Enter your lastame" required>
-                    <input type="text" name="nationality" class="form-input-field" placeholder="e.g Nigerian" required>                
-                    <input type="text" name="occupation" class="form-input-field" placeholder="e.g Farmer" required>                
-                    <label for="marital-status">Marital Status:<br>
+                    <label for="firstname">First Name <span class="required">*</span>
+                        <input type="text" name="firstname" class="form-input-field" placeholder="Enter your firstname" required>
+                    </label>
+                    <label for="lastname">Lastname <span class="required">*</span>
+                        <input type="text" name="lastname" class="form-input-field" placeholder="Enter your lastame" required>
+                    </label>
+                    <label for="nationality">Nationality <span class="required">*</span>
+                        <input type="text" name="nationality" class="form-input-field" placeholder="e.g Nigerian" required>                
+                    </label>
+                    <label for="occupation">Occupation <span class="required">*</span>
+                        <input type="text" name="occupation" class="form-input-field" placeholder="e.g Farmer" required>                
+                    </label>
+                    <label for="marital-status">Marital Status <span class="required">*</span><br>
                         <input type="radio" name="marital-status" value="single" required> <span class="radio-text">Single</span>
                         <input type="radio" name="marital-status" value="married" required><span class="radio-text">Married</span>
                         <input type="radio" name="marital-status" value="divorced" required><span class="radio-text">Divorced</span>        
                     </label>
-                    <label for="gender">Gender: <br>
+                    <label for="gender">Gender <span class="required">*</span><br>
                         <input type="radio" name="gender" class="" value="male" required> <span class="radio-text">Male</span>
                         <input type="radio" name="gender" class="" value="female"required> <span class="radio-text">Female</span>
                     </label>
                 </fieldset>
                 <fieldset>
                     <legend> Contact information </legend>
-                    <input type="email" name="email" class="form-input-field" value="your_login_email@mail.com" required>
-                    <input type="tel" name="phone" class="form-input-field" placeholder="e.g +2348063188534" required>
-                    <input type="text" name="res-address" class="form-input-field" placeholder="e.g 10, Davies street" required>
-                    <input type="text" name="city" class="form-input-field" placeholder="e.g ketu" required>
-                    <input type="text" name="state" class="form-input-field" placeholder="e.g Lagos" required>
-                    <input type="text" name="country" class="form-input-field" placeholder="e.g Nigeria" required>
-                </fieldset>
-                <fieldset>
-                    <legend> Account information </legend>
-                    <select name="account-type" class="form-input-field" required>
-                        <option value="">-- account type --</option>
-                        <option value="1">savings</option>
-                        <option value="2">current</option>
-                        <option value="3">fix deposit</option>
-                    </select>
-                    <label for="card-option">Do you want a card for this account?<br>
-                        <input type="radio" name="card-option" class="" value="1" required> <span class="radio-text">Yes</span>
-                        <input type="radio" name="card-option" class="" value="0" required> <span class="radio-text">No</span>
+                    <label for="email">Email <span class="required">*</span>
+                        <input type="email" name="email" class="form-input-field" value="your_login_email@mail.com" required>
+                    </label>
+                    <label for="phone">Telephone <span class="required">*</span>
+                        <input type="tel" name="phone" class="form-input-field" placeholder="e.g +2348063188534" required>
+                    </label>
+                    <label for="res-address">Address <span class="required">*</span>
+                        <input type="text" name="res-address" class="form-input-field" placeholder="e.g 10, Davies street" required>
+                    </label>
+                    <label for="city">City <span class="required">*</span>
+                        <input type="text" name="city" class="form-input-field" placeholder="e.g ketu" required>
+                    </label>
+                    <label for="state">State <span class="required">*</span>
+                        <input type="text" name="state" class="form-input-field" placeholder="e.g Lagos" required>
+                    </label>
+                    <label for="country">Country <span class="required">*</span>
+                        <input type="text" name="country" class="form-input-field" placeholder="e.g Nigeria" required>
                     </label>
                 </fieldset>
                 <fieldset>
+                    <legend> Account information </legend>
+                        <label for="account-type">Account Type <span class="required">*</span>
+                            <select name="account-type" class="form-input-field" required>
+                                <option value="">-- account type --</option>
+                                <option value="1">savings</option>
+                                <option value="2">current</option>
+                                <option value="3">fix deposit</option>
+                            </select>
+                        </label>
+                        <label for="card-option">Do you want a card for this account? <span class="required">*</span><br>
+                            <input type="radio" name="card-option" class="" value="1" required> <span class="radio-text">Yes</span>
+                            <input type="radio" name="card-option" class="" value="0" required> <span class="radio-text">No</span>
+                        </label>
+                </fieldset>
+                <fieldset>
                     <legend> Next-of-kin information </legend>
-                    <input type="text" name="nok-firstname" class="form-input-field" placeholder="Enter next of kin firstname" required>
-                    <input type="text" name="nok-lastname" class="form-input-field" placeholder="Enter next of kin lastname" required>
-                    <input type="email" name="nok-email" class="form-input-field" placeholder="Enter next of kin email address" required>
-                    <input type="tel" name="nok-phone" class="form-input-field" placeholder="Enter next of kin phone" required>
-                    <input type="text" name="nok-relationship" class="form-input-field" placeholder="e.g cousin" required>
+                    <label for="nok-firstname">Firstname <span class="required">*</span>
+                        <input type="text" name="nok-firstname" class="form-input-field" placeholder="Enter next of kin firstname" required>
+                    </label>
+                    <label for="nok-lastname">Lastname <span class="required">*</span>
+                        <input type="text" name="nok-lastname" class="form-input-field" placeholder="Enter next of kin lastname" required>
+                    </label>
+                    <label for="nok-email">Email <span class="required">*</span>
+                        <input type="email" name="nok-email" class="form-input-field" placeholder="Enter next of kin email address" required>
+                    </label>
+                    <label for="nok-phone">Telephone <span class="required">*</span>
+                        <input type="tel" name="nok-phone" class="form-input-field" placeholder="Enter next of kin phone" required>
+                    </label>
+                    <label for="nok-relationship">Relationship <span class="required">*</span>
+                        <input type="text" name="nok-relationship" class="form-input-field" placeholder="e.g cousin" required>
+                    </label>
                 </fieldset>
                 <button type="submit" class="btn btn-full-width large-btn">Submit</button>
                 <p>Already Have A Bank Account? <a href="bank-account-dashboard.html">Go to dashboard</a></p>

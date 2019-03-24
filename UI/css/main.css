@@ -53,6 +53,7 @@ input {
     border-left: 0;
     border-bottom: 1px solid #E0E0E0;
     color: var(--white);
+    display: block;
     /* max-height: 10vh; */
 }
 
@@ -212,7 +213,7 @@ legend {
     text-align: center;
 }
 
-label[for="marital-status"], label[for="gender"], label[for="card-option"] {
+label{
     width: 100%;
     display: block;
     text-align: start;
@@ -247,6 +248,10 @@ option {
 /* Misc Styles */
 .visible {
     display: block;
+}
+
+.required {
+    color: var(--red);
 }
 
 /* SMART PHONES PORTRAIT */

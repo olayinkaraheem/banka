@@ -34,8 +34,12 @@
         <section id="form-container">
             <h2 id="welcome-header">Login</h2>
             <form id="signup-form" method="post" action="login-landing.html">
-                <input type="email" class="form-input-field" placeholder="Enter your email">
-                <input type="password" class="form-input-field" placeholder="Enter your password">
+                <label for="email">Email <span class="required">*</span>
+                    <input type="email" name="email" class="form-input-field" placeholder="Enter your email">
+                </label>
+                <label for="password">Password <span class="required">*</span>
+                    <input type="password" name="password" class="form-input-field" placeholder="Enter your password">
+                </label>
                 <button type="submit" class="btn btn-full-width large-btn">Proceed</button>
                 <p>Not registered yet? <a href="signup.html">Signup</a></p>
             </form>
