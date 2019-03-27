@@ -102,6 +102,7 @@ footer {
     text-align: center;
     height: 80vh;
     overflow: auto;
+    scroll-behavior: smooth;
 }
 
 /* Landing Page Styles */
@@ -228,6 +229,62 @@ option {
     background-color: var(--light-purple);
 }
 
+/* Profile page styles */
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+#profile-information section {
+    margin: 3em auto;
+    text-align: initial;
+    line-height: 2em;
+    max-width: 40vw;
+}
+
+#basic-info-update, #contact-info-update {
+  margin: 0 auto;
+  z-index: 1000;
+  background-clip: padding-box;
+}
+
+.update-form label {
+    color: var(--gold) !important;
+}
+
+.update-form input, .btn, .radio-text {
+    color: var(--white) !important;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 8vh;
+  transition: opacity 1000ms;
+  transition: top 1000ms;
+  visibility: hidden;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+  top: 10vh;
+}
+
+.section-header {
+    color: var(--lighter-purple);
+}
+
+.update-form {
+    background-color: var(--purple) !important;
+}
+
 /* Buttons styles */
 .btn {
     border-radius: 5px;
@@ -245,6 +302,10 @@ option {
     width: 100%;
 }
 
+.danger-btn {
+    background-color: var(--red);
+}
+
 /* Misc Styles */
 .visible {
     display: block;
@@ -252,6 +313,10 @@ option {
 
 .required {
     color: var(--red);
+}
+
+.heart-color {
+    color: red;
 }
 
 /* SMART PHONES PORTRAIT */
@@ -295,7 +360,7 @@ option {
         background-color: var(--lighter-purple);
         display: flex;
         display: none;
-        width: 100%;
+        width: 100vw;
         text-align: center;
         position: fixed;
         top: 10vh;
@@ -319,6 +384,10 @@ option {
         transform: scale(1.1);
         transition: all ease-in-out 500ms;
         box-shadow: 0 0 2px var(--white);
+    }
+
+    #profile-information section {
+        max-width: 50vw;
     }
 
     .visible {
