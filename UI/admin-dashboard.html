@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Banka- Login</title>
+    <title>Banka- Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
 </head>
@@ -28,8 +28,8 @@
         </svg>
         <nav class="navigation">
             <ul>
-                <li><a href="staff-login.html">Logout</a></li>
-                <!-- <li><a href="profile.html">Profile</a></li> -->
+                <!-- <li><a href="bank-account-dashboard.html">Dashboard</a></li> -->
+                <li><a href="login.html">Logout</a></li>
             </ul>
         </nav>
     </header>
@@ -48,29 +48,29 @@
                 <li class="dashboard-menu-item"><a href="users.html">Users</a></li>
             </ul>
         </section>
-        <section id="banking-section">
-            <h2 id="welcome-header">Welcome, Staff...</h2>
-            <p>Click on the &plus; on the top-left to proceed</p>
-            <section id="bank-section-row">
-                <div id="my-bank"><a href="bank-account-dashboard.html">icon<br>My Bank</a></div>
-                <div id="mutual-fund"><a href="#">icon<br>Mutual Fund</a></div>            
-                <div id="wallet"><a href="#">icon<br>Wallet</a></div>
-                <div id="insurance"><a href="#">icon<br>Insurance</a></div>
+        <h2 id="welcome-header">Welcome</h2>
+        <section id="dashboard">
+            <section id="balance">
+                <h3 class="section-header">Processed</h3>
+                <div class="count">N1,200,550.00</div>
+                <a href="#" class="dashboard-view-more">view</a>
             </section>
-            <section id="open-account-link-section">
-                <p><a href="open-bank-account.html">icon<br>Open an instant account</a></p>
+            <section id="transaction-detail">
+                <h3 class="section-header">Transactions</h3>
+                <div class="count">223</div>
+                <a href="staff-transactions.html" class="dashboard-view-more">view</a>
             </section>
-            <section id="login-landing-other-section">
-                <div id="location"><a href="#">icon<br>Find Us</a></div>
-                <div id="notification"><a href="#">icon<br>Notifications</a></div>
-                <div id="get-help"><a href="#">icon<br>Get help</a></div>
+            <section id="dashboard-account-detail">
+                <h3 class="section-header">Accounts</h3>
+                <div class="count">237</div>
+                <a href="bank-accounts" class="dashboard-view-more">view</a>
             </section>
         </section>
     </main>
     <!-- **/ MAIN SECTION ENDS -->
     <!-- FOOTER SECTION STARTS -->
     <footer>
-        <p>&copy; 2019. Built and Designed With <span style="color:red">&#9829;</span> By Olayinka.</p>
+        <p>&copy; 2019. Built and Designed With <span class="heart-color">&#9829;</span> By Olayinka.</p>
     </footer>
     <!-- **/ FOOTER SECTION ENDS -->
     <script src="js/main.js"></script>
