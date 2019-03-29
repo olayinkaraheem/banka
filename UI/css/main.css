@@ -333,6 +333,13 @@ option {
     justify-content: space-evenly;
 }
 
+#client-transaction-detail div ul.section-information {
+    text-align: initial;
+    padding: 1.5em;
+    line-height: 2em;
+    list-style: none;
+}
+
 /* .section-header {
     display: flex;
 } */
@@ -406,7 +413,7 @@ option {
     color: var(--gold);
 }
 
-#account-detail div, #user-detail div, #new-user div {
+#account-detail div, #user-detail div, #new-user div, #client-transaction-detail div {
     box-shadow: 0 0 2px var(--white);
     height: 70vh;
     margin: 2em auto;
@@ -418,11 +425,15 @@ option {
     padding: 5px;
 }
 
-#account-detail div::-webkit-scrollbar, #user-detail div::-webkit-scrollbar, #new-user div::-webkit-scrollbar {
+#client-transaction-detail div {
+    height: auto;
+}
+
+#account-detail div::-webkit-scrollbar, #user-detail div::-webkit-scrollbar, #new-user div::-webkit-scrollbar, #client-transaction-detail div::-webkit-scrollbar {
     width: 0 !important;
 }
 
-#account-detail section, #user-detail section, #new-user section {
+#account-detail section, #user-detail section, #new-user section, #client-transaction-detail section {
     margin: 3em auto;
     line-height: 2em;
     max-width: 40vw;
@@ -436,7 +447,7 @@ option {
     box-shadow: 0 0 2px var(--white);
 }
 
-#account-detail a, #user-detail a, #new-user a {  
+#account-detail a, #user-detail a, #new-user a, #client-transaction-detail a {  
     position: absolute;
     right: 31vw;
     top: 9vh;
@@ -684,23 +695,23 @@ option {
         padding-top: 0;
     }
     
-    #account-detail div, #user-detail div, #new-user div {
+    #account-detail div, #user-detail div, #new-user div, #client-transaction-detail div {
         width: 90vw;
     }
 
-    #account-detail a, #user-detail a, #new-user a {
+    #account-detail a, #user-detail a, #new-user a, #client-transaction-detail a {
         position: absolute;
         right: 8vw;
         top: 6vh;
     }
 
-    #account-detail section, #user-detail section, #new-user section {
+    #account-detail section, #user-detail section, #new-user section, #client-transaction-detail section {
         margin: 3em auto;
         line-height: 2em;
         width: inherit;
     }
 
-    #account-detail section ul, #user-detail section ul {
+    #account-detail section ul, #user-detail section ul, #client-transaction-detail section ul {
         list-style-type: none;
         text-align: initial;
     }
