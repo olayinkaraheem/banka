@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Banka- Account Search</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+</head>
+<body>
+    <!-- HEADER SECTION STARTS -->
+    <header>
+        <a href="index.html"><span id="brand-name">banka</span></a>
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 224 224" style=" fill:#000000;" id="menu-icon">
+            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                <path d="M0,224v-224h224v224z" fill="none"></path>
+                <g fill="#ffffff">
+                    <g>
+                        <path d="M19.2,44.8c-2.30807,-0.03264 -4.45492,1.18 -5.61848,3.17359c-1.16356,1.99358 -1.16356,4.45924 0,6.45283c1.16356,1.99358 3.31041,3.20623 5.61848,3.17359h153.6c2.30807,0.03264 4.45492,-1.18 5.61848,-3.17359c1.16356,-1.99358 1.16356,-4.45924 0,-6.45283c-1.16356,-1.99358 -3.31041,-3.20623 -5.61848,-3.17359zM19.2,89.6c-2.30807,-0.03264 -4.45492,1.18 -5.61848,3.17359c-1.16356,1.99358 -1.16356,4.45924 0,6.45283c1.16356,1.99358 3.31041,3.20623 5.61848,3.17359h153.6c2.30807,0.03264 4.45492,-1.18 5.61848,-3.17359c1.16356,-1.99358 1.16356,-4.45924 0,-6.45283c-1.16356,-1.99358 -3.31041,-3.20623 -5.61848,-3.17359zM19.2,134.4c-2.30807,-0.03264 -4.45492,1.18 -5.61848,3.17359c-1.16356,1.99358 -1.16356,4.45924 0,6.45283c1.16356,1.99358 3.31041,3.20623 5.61848,3.17359h153.6c2.30807,0.03264 4.45492,-1.18 5.61848,-3.17359c1.16356,-1.99358 1.16356,-4.45924 0,-6.45283c-1.16356,-1.99358 -3.31041,-3.20623 -5.61848,-3.17359z"></path>           
+                    </g>
+                </g>
+            </g>
+        </svg>
+        <nav class="navigation">
+            <ul>
+                <li><a href="staff-login.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- **/ HEADER SECTION HEADS -->
+    <!-- MAIN SECTION STARTS -->
+    <main id="main">
+        <section id="dashboard-menu">
+            <span id="open-btn">&plus;</span>
+            <span id="close-btn">&times;</span>
+            <ul id="dashboard-menu-item-container">
+                <li class="dashboard-menu-item"><a href="bank-account-dashboard.html">dashboard</a></li>
+                <li class="dashboard-menu-item"><a href="transactions.html">Transactions</a></li>
+                <li class="dashboard-menu-item"><a href="#">notifications</a></li>
+                <li class="dashboard-menu-item"><a href="bank-accounts.html">Accounts</a></li>
+                <li class="dashboard-menu-item"><a href="account-search.html">Account operations</a></li>
+            </ul>
+        </section>
+        <section id="account-search-form-container">
+            <h2 id="welcome-header">Welcome, <i>Cashier Sean</i> </h2>
+            <form id="account-search-form" method="post" action="">
+                <label for="account">Account Number <span class="required">*</span>
+                    <input type="text" name="account" class="form-input-field" placeholder="Enter account number to search">
+                </label>
+                <button type="submit" class="btn btn-full-width large-btn">Proceed</button>
+            </form>
+        </section>
+        <section id="profile-information">
+            <img src="./images/pp.jpg" alt="profile_pics" class="profile-image">
+
+            <section id="account-information">
+                <h3 class="section-header">Account Information</h3>
+                <ul class="section-information">
+                    <li>Account name: Olayinka Kareem</li>
+                    <li>Account number: 0012345678</li>
+                    <li>Account BVN: 00897654321</li>
+                    <li>Account Type: Savings</li>
+                    <li>Available Balance: N1,200,545.00</li>
+                    <li>Account Creation date: 21-03-2019</li>
+                </ul>
+            </section>
+            
+            <a href="#credit-operation" class="btn credit">&plus; Credit Oparation</a>
+            <a href="#debit-operation" class="btn debit">&minus; Debit Operation</a>
+        </section>
+        <div id="credit-operation" class="overlay">
+            <form method="post" class="update-form" action="credit.html">
+                <h4>Credit Operation</h4>
+                <label for="depositor">Depositor's Name: <span class="required">*</span>
+                    <input type="text" name="depositor" class="form-input-field" value="" placeholder="Enter depostor's name"
+                        required>
+                </label>
+                <label for="phone">Depositor's Phone <span class="required">*</span>
+                    <input type="tel" name="phone" class="form-input-field" value="" placeholder="Enter depositor's phone number"
+                        required>
+                </label>
+                <label for="amount">Amount <span class="required">*</span>
+                    <input type="text" name="amount" class="form-input-field" value="" placeholder="Amount to deposit"
+                        required>
+                </label>
+                
+                <input type="hidden" name="trans_type" class="form-input-field" value="1">
+                <input type="hidden" name="branch_code" class="form-input-field" value="232">
+                <input type="hidden" name="cashier_id" class="form-input-field" value="02352">
+                
+                <label for="comment">Comment <span class="required">*</span>
+                    <textarea name="comment" class="form-input-field" placeholder="Enter transaction comment here..." required></textarea>
+                </label>
+                <button type="submit" class="btn">Credit</button>
+                <a href="#" class="btn danger-btn">Cancel</a>
+            </form>
+        </div>
+        
+        <div id="debit-operation" class="overlay">
+            <form method="post" class="update-form" action="credit.html">
+                <h4>Debit Operation</h4>
+                <label for="account_name">Account Name: <span class="required">*</span>
+                    <input type="text" name="account_name" class="form-input-field" value="Olayinka Raheem" disabled required>
+                </label>
+                <label for="amount">Amount <span class="required">*</span>
+                    <input type="text" name="amount" class="form-input-field" value="" placeholder="Amount to deposit"
+                        required>
+                </label>
+                
+                <input type="hidden" name="trans_type" class="form-input-field" value="2">
+                <input type="hidden" name="branch_code" class="form-input-field" value="232">
+                <input type="hidden" name="cashier_id" class="form-input-field" value="02352">
+                
+                <label for="comment">Comment <span class="required">*</span>
+                    <textarea name="comment" class="form-input-field" placeholder="Enter transaction comment here..." required></textarea>
+                </label>
+                <button type="submit" class="btn">Debit</button>
+                <a href="#" class="btn danger-btn">Cancel</a>
+            </form>
+        </div>
+    </main>
+    <!-- MAIN SECTION ENDS -->
+    <!-- FOOTER SECTION STARTS -->
+    <footer>
+        <p>&copy; 2019. Built and Designed With <span style="color:red">&#9829;</span> By Olayinka.</p>
+    </footer>
+    <!-- FOOTER SECTION ENDS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
