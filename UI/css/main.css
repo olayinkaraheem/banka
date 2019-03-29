@@ -8,6 +8,7 @@
     --white: #fff;
     --gold: gold;
     --green: #00AA00;
+    --black: #000;
 }
 
 /* Re-setting all default values */
@@ -243,6 +244,7 @@ option {
     position: absolute;
     top: 13vh;
     left: 10vw;
+    /* background-color: var(--blue); */
 }
 
 #dashboard-menu-item-container {
@@ -250,6 +252,10 @@ option {
     position: relative;
     left: -25vw; /*for slide in*/
     list-style-type: none;
+    background-color: var(--blue);
+    border: 1px solid var(--black);
+    border-radius: 5px;
+    box-shadow: 0 0 2px var(--white);
 }
 
 #open-btn, #close-btn {
@@ -641,7 +647,7 @@ option {
     }
 
     #dashboard-menu-item-container {
-        left: -50vw;
+        left: -60vw;
     }
 
     #open-btn {
@@ -650,7 +656,7 @@ option {
     }
 
     .show-menu {
-        transform: translate(35vw, 0) !important;
+        transform: translate(51vw, 0) !important;
         transition: transform 500ms ease-in-out;
     }
 
