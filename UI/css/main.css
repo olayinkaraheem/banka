@@ -7,6 +7,7 @@
     --red: #DB2B30;
     --white: #fff;
     --gold: gold;
+    --green: #00FF00;
 }
 
 /* Re-setting all default values */
@@ -229,6 +230,35 @@ option {
     background-color: var(--light-purple);
 }
 
+/* Dashboard Menu Styles */
+#dashboard-menu {
+    position: absolute;
+    top: 13vh;
+    left: 10vw;
+}
+
+#dashboard-menu-item-container {
+    /* position:inherit; */
+    position: relative;
+    left: -25vw; /*for slide in*/
+    list-style-type: none;
+}
+
+#open-btn, #close-btn {
+    padding: .5em .7em;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#open-btn {
+    background-color: rgba(90, 20, 42, 0.5);
+    box-shadow: 0 0 2px var(--white);
+}
+
+#close-btn {
+    background-color: transparent;
+}
+
 /* Profile page styles */
 .profile-image {
     width: 150px;
@@ -285,6 +315,40 @@ option {
     background-color: var(--purple) !important;
 }
 
+/* Transaction history styles */
+
+#transactions {
+    width : 80vw;
+    margin: 0 auto;
+}
+
+#transaction {
+    border: 1px solid rgba(90, 20, 42, 0.5);
+    padding: 1em;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* .section-header {
+    display: flex;
+} */
+
+.section-header span {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+}
+
+.debit {
+    background-color: var(--red);
+}
+
+.credit {
+    background-color: var(--green);
+}
+
+
 /* Buttons styles */
 .btn {
     border-radius: 5px;
@@ -318,6 +382,26 @@ option {
 .heart-color {
     color: red;
 }
+
+.show-menu {
+   transform: translate(25vw, 0) !important;
+   transition: transform 500ms ease-in-out;
+}
+
+.dashboard-menu-item {
+    padding: 10px 30px;
+    border-bottom: .5px solid rgba(200, 144, 214, 0.856);
+    text-transform: capitalize;
+}
+
+.dashboard-menu a {
+    width: 100%;
+}
+
+/* .hide-menu {
+    transform: translate(-25vw, 0) !important;
+    transition: transform 500ms ease-in-out;
+} */
 
 /* SMART PHONES PORTRAIT */
 @media only screen and (min-width: 320px) and (max-width: 800px) {
@@ -388,6 +472,53 @@ option {
 
     #profile-information section {
         max-width: 50vw;
+    }
+
+    #dashboard-menu-item-container {
+    /* position:inherit; */
+    /* position: relative; */
+    /* left: -25vw; for slide in */
+    /* list-style-type: none; */
+        left: -50vw;
+    }
+
+    #open-btn {
+        position: absolute;
+        left: -2vw;
+    }
+
+    .show-menu {
+        transform: translate(35vw, 0) !important;
+        transition: transform 500ms ease-in-out;
+    }
+
+    #transactions {
+        width: 90vw;
+        text-align: left !important;
+        margin: 0 auto;
+    }
+
+    #transaction {
+        display: block;
+        margin: 1em 0;
+        padding: 0 1em;
+        width: 100%;
+        word-break: break-all;
+        line-height: 1.5em;
+    }
+
+    .row {
+        display: flex;
+        border-radius: 1px solid var(--gold);
+        /* flex-wrap: wrap; */
+    }
+
+    .label {
+        width: 30%;
+    }
+
+    .detail {
+        width: 70%;
     }
 
     .visible {
