@@ -30,6 +30,10 @@ a {
     text-decoration: none;
 }
 
+h1, h2, h3, h4, thead {
+    font-weight: 100;
+}
+
 form {
     border-radius: 5px;
     box-shadow: 0 0 2px #fff;
@@ -287,26 +291,6 @@ option {
     color: var(--white) !important;
 }
 
-.overlay {
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding-top: 8vh;
-  transition: opacity 1000ms;
-  transition: top 1000ms;
-  visibility: hidden;
-}
-
-.overlay:target {
-  visibility: visible;
-  opacity: 1;
-  top: 10vh;
-}
-
 .section-header {
     color: var(--lighter-purple);
 }
@@ -377,6 +361,98 @@ option {
     border-radius: 3px;
     background-color: var(--lighter-purple);
 }
+
+/* Accounts page styles */
+#accounts {
+    display: flex;
+    max-width: 80vw;
+    margin: 0 auto;
+}
+
+.table {
+    width: 100%;
+}
+
+.table tr {
+    line-height: 2.5em;
+}
+
+.table tr:nth-child(even), .table thead {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.table thead {
+    color: var(--gold);
+}
+
+/* 
+#account-detail {
+    
+} */
+
+#account-detail div {
+    box-shadow: 0 0 2px var(--white);
+    height: 70vh;
+    margin: 2em auto;
+    width: 40vw;
+    background-color: var(--purple);
+    border-radius: 10px;
+    overflow-y: scroll;
+    /* box-sizing: content-box; */
+    box-sizing: c-box;
+    padding: 5px;
+    /* width: inherit; */
+    /* height: inherit; */
+}
+
+#account-detail div::-webkit-scrollbar {
+    width: 0 !important;
+}
+
+#account-detail section {
+    margin: 3em auto;
+    /* text-align: initial; */
+    line-height: 2em;
+    max-width: 40vw;
+}
+
+#account-detail div .section-information {
+    /* color: var(--purple); */
+}
+
+#delete-message-container {
+    padding: 1em;
+    /* background-color: var(--white); */
+    background-color: var(--purple);
+    /* background: visible; */
+    /* height: 30vh; */
+    width: 20vw;
+    margin: 0 auto;
+    box-shadow: 0 0 2px var(--white);
+}
+
+#account-detail a {
+    /* position: absolute;
+    right: 15px;
+    top: 15px; */
+    /* position: relative;
+    left: 22em;
+    top: -7em; */
+    position: absolute;
+    right: 31vw;
+    top: 9vh;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    padding: 5px 10px;
+    border: none;
+}
+
+#delete-message-container h3 {
+    margin: 1em;
+    font-weight: lighter;
+}
+
+
 /* Buttons styles */
 .btn {
     border-radius: 5px;
@@ -425,6 +501,46 @@ option {
 .dashboard-menu a {
     width: 100%;
 }
+
+.delete-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 8vh;
+  transition: opacity 1000ms;
+  transition: top;
+  visibility: hidden;
+}
+.overlay {
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* padding-top: 8vh; */
+  transition: opacity 1000ms;
+  transition: top 1000ms;
+  visibility: hidden;
+}
+
+.delete-overlay:target {
+  visibility: visible;
+  opacity: 1;
+  top: 10vh;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+  top: 10vh;
+}
+
 
 /* .hide-menu {
     transform: translate(-25vw, 0) !important;
@@ -520,6 +636,43 @@ option {
         width: 90vw;
         text-align: left !important;
         margin: 0 auto;
+    }
+
+    #accounts {
+        display: flex;
+        max-width: 95vw;
+        margin: 0 auto;
+    }
+    
+    #account-detail div {
+        width: 90vw;
+    }
+
+    #account-detail a {
+        position: absolute;
+        right: 8vw;
+        top: 6vh;
+        /* border-radius: 50%; */
+    }
+
+    #account-detail section {
+        margin: 3em auto;
+        /* text-align: initial; */
+        line-height: 2em;
+        width: inherit;
+    }
+
+    #account-detail section ul {
+        list-style-type: none;
+        text-align: initial;
+    }
+
+    #delete-message-container {
+        width: 80vw;
+    }
+    
+    #delete-message-container h3 {
+        margin: 1em !important;
     }
 
     #transaction {
