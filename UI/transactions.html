@@ -68,7 +68,7 @@
                     <!-- <div class="col label">Available Bal</div> -->
                     <!-- <div class="col detail">N157,000.00</div> -->
                 <!-- </div> -->
-                <a href="#transaction-detail">View Detail</a>
+                <a href="#client-transaction-detail" class="view">View Detail</a>
             </section>       
             <section id="transaction">
                 <div class="section-header">
@@ -90,7 +90,7 @@
                     <!-- <div class="col label">Available Bal</div> -->
                     <!-- <div class="col detail">N157,000.00</div> -->
                     <!-- </div> -->
-                    <a href="#transaction-detail">View Detail</a>
+                    <a href="#client-transaction-detail" class="view">View Detail</a>
             </section>       
             <section id="transaction">
                     <div class="section-header">                    
@@ -112,7 +112,7 @@
                         <!-- <div class="col label">Available Bal</div> -->
                         <!-- <div class="col detail">N157,000.00</div> -->
                     <!-- </div> -->
-                <a href="#transaction-detail">View Detail</a>
+                <a href="#client-transaction-detail" class="view">View Detail</a>
             </section>       
             <section id="transaction">
                 <div class="section-header">
@@ -134,7 +134,7 @@
                     <!-- <div class="col label">Available Bal</div> -->
                     <!-- <div class="col detail">N157,000.00</div> -->
                 <!-- </div> -->
-                <a href="#transaction-detail">View Detail</a>
+                <a href="#client-transaction-detail" class="view">View Detail</a>
             </section>       
             <!-- <section id="transaction">
                 <h3 class="section-header"><span class="debit"></span>Debit Notification</h3>
@@ -156,10 +156,53 @@
             </section>        -->
         </section>
 
+        <div id="account-detail" class="overlay">
+            <!-- <a href="#" class="btn">&times;</a> -->
+            <div>
+                <a href="#" class="btn">&times;</a>
+                <img src="./images/pp.jpg" alt="profile_pics" class="profile-image">
+                <section id="basic-information">
+                    <h3 class="section-header">Basic Information</h3>
+                    <ul class="section-information">
+                        <li>Firstname: Olayinka</li>
+                        <li>Lastname: Kareem</li>
+                        <li>Gender: Male</li>
+                        <li>Nationality: Nigerian</li>
+                    </ul>
+                </section>
+                <!-- <section id="contact-information">
+                            <h3 class="section-header">Contact Information</h3>
+                            <ul class="section-information">
+                            </ul>
+                        </section> -->
+                <section id="account-information">
+                    <h3 class="section-header">Account Information</h3>
+                    <ul class="section-information">
+                        <li>Account name: Olayinka Kareem</li>
+                        <li>Account number: 0012345678</li>
+                        <li>Account BVN: 00897654321</li>
+                        <li>Account Phone: +2348063188534</li>
+                        <li>Account Type: Savings</li>
+                        <li>Account Creation date: 21-03-2019</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
         
         <!-- <a href="#" class="close"></a> -->
-        <div id="transaction-detail" class="overlay">
-            <a href="#" class="btn danger-btn">Cancel</a>
+        <div id="client-transaction-detail" class="overlay">
+            <a href="#" class="btn">&times;</a>
+            <div>
+                <h3 class="section-header">Transaction Detail</h3>
+                <ul class="section-information">
+                    <li>Transaction Type: Credit</li>
+                    <li>Depositor: Alan Smith</li>
+                    <li>Trans. Ref: REF00897654321</li>
+                    <li>Comment: Cash deposit from Alan Smith|Unilag Akoka branch</li>
+                    <li>Amount: N5,000</li>
+                    <li>Value date: 21-03-2019</li>
+                </ul>
+            </div>
         </div>
 
     </main>
