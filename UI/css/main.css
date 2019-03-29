@@ -242,7 +242,7 @@ option {
 /* Dashboard Menu Styles */
 #dashboard-menu {
     position: absolute;
-    top: 13vh;
+    top: 15vh;
     left: 10vw;
     /* background-color: var(--blue); */
 }
@@ -262,15 +262,21 @@ option {
     padding: .5em .7em;
     border-radius: 50%;
     cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 0 2px var(--white);
 }
 
 #open-btn {
     background-color: rgba(90, 20, 42, 0.5);
-    box-shadow: 0 0 2px var(--white);
+    transform: translate(0, 0) !important;
+    transition: transform 1000ms ease-in-out;
 }
 
 #close-btn {
-    background-color: transparent;
+    /* background-color: transparent; */
+    background-color: rgba(0, 0, 0, 0.6);
+    transform: translate(30vw, 0) !important;
+    transition: transform 1000ms ease-in-out;
 }
 
 /* Profile page styles */
@@ -615,7 +621,9 @@ option {
     .navigation {
         background-color: var(--lighter-purple);
         display: flex;
-        display: none;
+        /* display: none; */
+        opacity: 0;
+        /* height: 0; */
         width: 100vw;
         text-align: center;
         position: fixed;
@@ -650,7 +658,7 @@ option {
         left: -60vw;
     }
 
-    #open-btn {
+    #open-btn, #close-btn {
         position: absolute;
         left: -2vw;
     }
@@ -744,5 +752,7 @@ option {
 
     .visible {
         display: block;
+        opacity: 1;
+        transition: opacity 600ms ease-out;
     }
 }
