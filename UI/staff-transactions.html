@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Banka- Transaction History</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+</head>
+
+<body>
+    <!-- HEADER SECTION STARTS -->
+    <header>
+        <a href="index.html"><span id="brand-name">banka</span></a>
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 224 224" style=" fill:#000000;"
+            id="menu-icon">
+            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
+                stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                <path d="M0,224v-224h224v224z" fill="none"></path>
+                <g fill="#ffffff">
+                    <g>
+                        <path d="M19.2,44.8c-2.30807,-0.03264 -4.45492,1.18 -5.61848,3.17359c-1.16356,1.99358 -1.16356,4.45924 0,6.45283c1.16356,1.99358 3.31041,3.20623 5.61848,3.17359h153.6c2.30807,0.03264 4.45492,-1.18 5.61848,-3.17359c1.16356,-1.99358 1.16356,-4.45924 0,-6.45283c-1.16356,-1.99358 -3.31041,-3.20623 -5.61848,-3.17359zM19.2,89.6c-2.30807,-0.03264 -4.45492,1.18 -5.61848,3.17359c-1.16356,1.99358 -1.16356,4.45924 0,6.45283c1.16356,1.99358 3.31041,3.20623 5.61848,3.17359h153.6c2.30807,0.03264 4.45492,-1.18 5.61848,-3.17359c1.16356,-1.99358 1.16356,-4.45924 0,-6.45283c-1.16356,-1.99358 -3.31041,-3.20623 -5.61848,-3.17359zM19.2,134.4c-2.30807,-0.03264 -4.45492,1.18 -5.61848,3.17359c-1.16356,1.99358 -1.16356,4.45924 0,6.45283c1.16356,1.99358 3.31041,3.20623 5.61848,3.17359h153.6c2.30807,0.03264 4.45492,-1.18 5.61848,-3.17359c1.16356,-1.99358 1.16356,-4.45924 0,-6.45283c-1.16356,-1.99358 -3.31041,-3.20623 -5.61848,-3.17359z"></path>
+                    </g>
+                </g>
+            </g>
+        </svg>
+        <nav class="navigation">
+            <ul>
+                <!-- <li><a href="bank-account-dashboard.html">Dashboard</a></li> -->
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- **/ HEADER SECTION ENDS -->
+    <!-- MAIN SECTION STARTS -->
+    <main id="main">
+        <section id="dashboard-menu">
+            <span id="open-btn">&plus;</span>
+            <span id="close-btn">&times;</span>
+            <ul id="dashboard-menu-item-container">
+                <li class="dashboard-menu-item"><a href="bank-account-dashboard.html">dashboard</a></li>
+                <li class="dashboard-menu-item"><a href="transactions.html">Transactions</a></li>
+                <li class="dashboard-menu-item"><a href="#">notifications</a></li>
+                <li class="dashboard-menu-item"><a href="banks-accounts">Accounts</a></li>
+                <li class="dashboard-menu-item"><a href="account-search.html">Account operations</a></li>
+                <li class="dashboard-menu-item"><a href="users.html">Users</a></li>
+            </ul>
+        </section>
+        <h2 id="welcome-header">Previous Transactions</h2>
+        <section id="transactions">
+            <section id="transaction">
+                <div class="section-header">
+                    <div class="col detail"><span class="debit"></span> Debit</div>
+                </div>
+                <div class="row">
+                    <!-- <div class="col label">Description</div> -->
+                    <div class="col detail">Cash transfer to Adele
+                        <!--|00124532123 Ref:DT983434312676742WY-->
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- <div class="col label">Amount</div>  -->
+                    <div class="col detail">N15,000.00</div>
+                </div>
+                <div class="row">
+                    <!-- <div class="col label">Value Date</div> -->
+                    <div class="col detail">23-12-2018 12:34:54 PM</div>
+                </div>
+                <!-- <div class="row"> -->
+                <!-- <div class="col label">Available Bal</div> -->
+                <!-- <div class="col detail">N157,000.00</div> -->
+                <!-- </div> -->
+                <a href="#transaction-detail">View Detail</a>
+            </section>
+            <section id="transaction">
+                <div class="section-header">
+                    <div class="col detail"><span class="credit"></span> Credit</div>
+                </div>
+                <div class="row">
+                    <!-- <div class="col label">Description</div> -->
+                    <div class="col detail">Cash transfer from Adele
+                        <!--|00124532123 Ref:DT983434312676742WY-->
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- <div class="col label">Amount</div>  -->
+                    <div class="col detail">N15,000.00</div>
+                </div>
+                <div class="row">
+                    <!-- <div class="col label">Value Date</div> -->
+                    <div class="col detail">23-12-2018 12:34:54 PM</div>
+                </div>
+                <!-- <div class="row"> -->
+                <!-- <div class="col label">Available Bal</div> -->
+                <!-- <div class="col detail">N157,000.00</div> -->
+                <!-- </div> -->
+                <a href="#transaction-detail">View Detail</a>
+            </section>
+            <section id="transaction">
+                <div class="section-header">
+                    <div class="col detail"><span class="debit"></span> Debit</div>
+                </div>
+                <div class="row">
+                    <!-- <div class="col label">Description</div> -->
+                    <div class="col detail">Cash transfer to Adele
+                        <!--|00124532123 Ref:DT983434312676742WY-->
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- <div class="col label">Amount</div>  -->
+                    <div class="col detail">N15,000.00</div>
+                </div>
+                <div class="row">
+                    <!-- <div class="col label">Value Date</div> -->
+                    <div class="col detail">23-12-2018 12:34:54 PM</div>
+                </div>
+                <!-- <div class="row"> -->
+                <!-- <div class="col label">Available Bal</div> -->
+                <!-- <div class="col detail">N157,000.00</div> -->
+                <!-- </div> -->
+                <a href="#transaction-detail">View Detail</a>
+            </section>
+            <section id="transaction">
+                <div class="section-header">
+                    <div class="col detail"><span class="credit"></span> Credit</div>
+                </div>
+                <div class="row">
+                    <!-- <div class="col label">Description</div> -->
+                    <div class="col detail">Cash transfer from Adele
+                        <!--|00124532123 Ref:DT983434312676742WY-->
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- <div class="col label">Amount</div>  -->
+                    <div class="col detail">N15,000.00</div>
+                </div>
+                <div class="row">
+                    <!-- <div class="col label">Value Date</div> -->
+                    <div class="col detail">23-12-2018 12:34:54 PM</div>
+                </div>
+                <!-- <div class="row"> -->
+                <!-- <div class="col label">Available Bal</div> -->
+                <!-- <div class="col detail">N157,000.00</div> -->
+                <!-- </div> -->
+                <a href="#transaction-detail">View Detail</a>
+            </section>
+            <section id="transaction">
+                <div class="section-header">
+                    <div class="col detail"><span class="debit"></span> Debit</div>
+                </div>
+                <div class="row">
+                    <!-- <div class="col label">Description</div> -->
+                    <div class="col detail">Cash transfer to Adele
+                        <!--|00124532123 Ref:DT983434312676742WY-->
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- <div class="col label">Amount</div>  -->
+                    <div class="col detail">N15,000.00</div>
+                </div>
+                <div class="row">
+                    <!-- <div class="col label">Value Date</div> -->
+                    <div class="col detail">23-12-2018 12:34:54 PM</div>
+                </div>
+                <!-- <div class="row"> -->
+                <!-- <div class="col label">Available Bal</div> -->
+                <!-- <div class="col detail">N157,000.00</div> -->
+                <!-- </div> -->
+                <a href="#transaction-detail">View Detail</a>
+            </section>
+            <section id="transaction">
+                <div class="section-header">
+                    <div class="col detail"><span class="credit"></span> Credit</div>
+                </div>
+                <div class="row">
+                    <!-- <div class="col label">Description</div> -->
+                    <div class="col detail">Cash transfer from Adele
+                        <!--|00124532123 Ref:DT983434312676742WY-->
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- <div class="col label">Amount</div>  -->
+                    <div class="col detail">N15,000.00</div>
+                </div>
+                <div class="row">
+                    <!-- <div class="col label">Value Date</div> -->
+                    <div class="col detail">23-12-2018 12:34:54 PM</div>
+                </div>
+                <!-- <div class="row"> -->
+                <!-- <div class="col label">Available Bal</div> -->
+                <!-- <div class="col detail">N157,000.00</div> -->
+                <!-- </div> -->
+                <a href="#transaction-detail">View Detail</a>
+            </section>
+            <section id="transaction">
+                <div class="section-header">
+                    <div class="col detail"><span class="debit"></span> Debit</div>
+                </div>
+                <div class="row">
+                    <!-- <div class="col label">Description</div> -->
+                    <div class="col detail">Cash transfer to Adele
+                        <!--|00124532123 Ref:DT983434312676742WY-->
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- <div class="col label">Amount</div>  -->
+                    <div class="col detail">N15,000.00</div>
+                </div>
+                <div class="row">
+                    <!-- <div class="col label">Value Date</div> -->
+                    <div class="col detail">23-12-2018 12:34:54 PM</div>
+                </div>
+                <!-- <div class="row"> -->
+                <!-- <div class="col label">Available Bal</div> -->
+                <!-- <div class="col detail">N157,000.00</div> -->
+                <!-- </div> -->
+                <a href="#transaction-detail">View Detail</a>
+            </section>
+            <section id="transaction">
+                <div class="section-header">
+                    <div class="col detail"><span class="credit"></span> Credit</div>
+                </div>
+                <div class="row">
+                    <!-- <div class="col label">Description</div> -->
+                    <div class="col detail">Cash transfer from Adele
+                        <!--|00124532123 Ref:DT983434312676742WY-->
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- <div class="col label">Amount</div>  -->
+                    <div class="col detail">N15,000.00</div>
+                </div>
+                <div class="row">
+                    <!-- <div class="col label">Value Date</div> -->
+                    <div class="col detail">23-12-2018 12:34:54 PM</div>
+                </div>
+                <!-- <div class="row"> -->
+                <!-- <div class="col label">Available Bal</div> -->
+                <!-- <div class="col detail">N157,000.00</div> -->
+                <!-- </div> -->
+                <a href="#transaction-detail">View Detail</a>
+            </section>
+            <section id="transaction">
+                <div class="section-header">
+                    <div class="col detail"><span class="debit"></span> Debit</div>
+                </div>
+                <div class="row">
+                    <!-- <div class="col label">Description</div> -->
+                    <div class="col detail">Cash transfer to Adele
+                        <!--|00124532123 Ref:DT983434312676742WY-->
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- <div class="col label">Amount</div>  -->
+                    <div class="col detail">N15,000.00</div>
+                </div>
+                <div class="row">
+                    <!-- <div class="col label">Value Date</div> -->
+                    <div class="col detail">23-12-2018 12:34:54 PM</div>
+                </div>
+                <!-- <div class="row"> -->
+                <!-- <div class="col label">Available Bal</div> -->
+                <!-- <div class="col detail">N157,000.00</div> -->
+                <!-- </div> -->
+                <a href="#transaction-detail">View Detail</a>
+            </section>
+            <!-- <section id="transaction">
+                <h3 class="section-header"><span class="debit"></span>Debit Notification</h3>
+                <p class="description">
+                    Cash transfer to Adele|00124532123 Ref:DT983434312676742WY
+                </p>
+                <p>Amount : N15,000.00</p>
+                <p>Value Date : 23-12-2018 12:34:54 PM</p>
+                <p>Available Bal: N157,000.00</p>
+            </section>       
+            <section id="transaction">
+                <h3 class="section-header"><span class="debit"></span>Debit Notification</h3>
+                <p class="description">
+                    Cash transfer to Adele|00124532123 Ref:DT983434312676742WY
+                </p>
+                <p>Amount : N15,000.00</p>
+                <p>Value Date : 23-12-2018 12:34:54 PM</p>
+                <p>Available Bal: N157,000.00</p>
+            </section>        -->
+        </section>
+
+
+        <!-- <a href="#" class="close"></a> -->
+        <div id="transaction-detail" class="overlay">
+            <a href="#" class="btn danger-btn">Cancel</a>
+        </div>
+
+    </main>
+    <!-- **/ MAIN SECTION ENDS -->
+    <!-- FOOTER SECTION STARTS -->
+    <footer>
+        <p>&copy; 2019. Built and Designed With <span class="heart-color">&#9829;</span> By Olayinka.</p>
+    </footer>
+    <!-- **/ FOOTER SECTION ENDS -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
