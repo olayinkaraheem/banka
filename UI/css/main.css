@@ -348,7 +348,35 @@ option {
     background-color: var(--green);
 }
 
+/* Dashboard Styles */
+#dashboard {
+    display: flex;
+    max-width: 80vw;
+    justify-content: space-between;
+    margin: 0 auto;
+}
 
+#dashboard section {
+    border: 5px solid rgba(90, 20, 42, 0.5);
+    border-radius: 5px;
+    width: 33%;
+}
+
+#dashboard h3 {
+    border-bottom: 1px solid  rgba(90, 20, 42, 0.5);
+}
+
+#dashboard .count {
+    padding: 24px;
+    font-size: 200%;
+}
+
+#dashboard a {
+    padding: 1em;/* 1em 0 1em*/
+    width: 100%;
+    border-radius: 3px;
+    background-color: var(--lighter-purple);
+}
 /* Buttons styles */
 .btn {
     border-radius: 5px;
@@ -475,10 +503,6 @@ option {
     }
 
     #dashboard-menu-item-container {
-    /* position:inherit; */
-    /* position: relative; */
-    /* left: -25vw; for slide in */
-    /* list-style-type: none; */
         left: -50vw;
     }
 
@@ -505,6 +529,21 @@ option {
         width: 100%;
         word-break: break-all;
         line-height: 1.5em;
+    }
+
+    #dashboard {
+        display: flex;
+        width: 80vw;
+        /* justify-content: space-between; */
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+
+    #dashboard section {
+        border: 5px solid rgba(90, 20, 42, 0.5);
+        border-radius: 5px;
+        width: inherit;
+        margin: 10px 0;
     }
 
     .row {

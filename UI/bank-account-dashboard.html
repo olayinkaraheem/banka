@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Banka- Profile</title>
+    <title>Banka- Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
 </head>
@@ -28,7 +28,7 @@
         </svg>
         <nav class="navigation">
             <ul>
-                <li><a href="bank-account-dashboard.html">Dashboard</a></li>
+                <!-- <li><a href="bank-account-dashboard.html">Dashboard</a></li> -->
                 <li><a href="login.html">Logout</a></li>
             </ul>
         </nav>
@@ -36,101 +36,34 @@
     <!-- **/ HEADER SECTION ENDS -->
     <!-- MAIN SECTION STARTS -->
     <main id="main">
-        <h2 id="welcome-header">Profile</h2>
-        <section id="profile-information">
-            <img src="./images/pp.jpg" alt="profile_pics" class="profile-image">
-            <section id="basic-information">
-                <h3 class="section-header">Basic Information</h3>
-                <ul class="section-information">
-                    <li>Firstname: Olayinka</li>
-                    <li>Lastname: Kareem</li>
-                    <li>Gender: Male</li>
-                    <li>Marital status: Married</li>
-                    <li>Nationality: Nigerian</li>
-                </ul>
-                <a href="#basic-info-update" class="btn" id="basic-info-edit">&#9998; Edit</a>
+        <section id="dashboard-menu">
+            <span id="open-btn">&plus;</span>
+            <span id="close-btn">&times;</span>
+            <ul id="dashboard-menu-item-container">
+                <li class="dashboard-menu-item"><a href="bank-account-dashboard.html">dashboard</a></li>
+                <li class="dashboard-menu-item"><a href="transactions.html">Transactions</a></li>
+                <li class="dashboard-menu-item"><a href="#">notifications</a></li>
+                <li class="dashboard-menu-item"><a href="profile.html">profile</a></li>
+            </ul>
+        </section>
+        <h2 id="welcome-header">Welcome</h2>
+        <section id="dashboard">
+            <section id="balance">
+                <h3 class="section-header">Account Balance</h3>
+                <div class="count">N1,200,550.00</div>
+                <a href="#" class="dashboard-view-more">view</a>
             </section>
-            <section id="contact-information">
-                <h3 class="section-header">Contact Information</h3>
-                <ul class="section-information">
-                    <li>Address: 10, Daives street, Ketu - Lagos.</li>
-                    <li>Email: olayinka.raheem16@gmail.com</li>
-                    <li>Phone: +2348063188534</li>
-                </ul>
-                <a href="#contact-info-update" class="btn" id="contact-info-edit">&#9998; Edit</a>
+            <section id="transaction-detail">
+                <h3 class="section-header">Transactions</h3>
+                <div class="count">223</div>
+                <a href="transactions.html" class="dashboard-view-more">view</a>
             </section>
-            <section id="account-information">
-                <h3 class="section-header">Account Information</h3>
-                <ul class="section-information">
-                    <li>Account number: 0012345678</li>
-                    <li>Account BVN: 00897654321</li>
-                    <li>Account Type: Savings</li>
-                    <li>Account Creation date: 21-03-2019</li>
-                </ul>
+            <section id="account-detail">
+                <h3 class="section-header">Accounts</h3>
+                <div class="count">1</div>
+                <a href="profile.html#account-information" class="dashboard-view-more">view</a>
             </section>
         </section>
-
-
-        <!-- <a href="#" class="close"></a> -->
-        <div id="basic-info-update" class="overlay">
-            <form method="post" class="update-form">
-                <label for="firstname">First Name <span class="required">*</span>
-                    <input type="text" name="firstname" class="form-input-field" value="Kareem" placeholder="Enter your firstname"
-                        required>
-                </label>
-                <label for="lastname">Lastname <span class="required">*</span>
-                    <input type="text" name="lastname" class="form-input-field" value="Raheem" placeholder="Enter your lastame"
-                        required>
-                </label>
-                <label for="nationality">Nationality <span class="required">*</span>
-                    <input type="text" name="nationality" class="form-input-field" value="Nigerian" placeholder="e.g Nigerian"
-                        required>
-                </label>
-                <label for="occupation">Occupation <span class="required">*</span>
-                    <input type="text" name="occupation" class="form-input-field" value="Web Developer" placeholder="e.g Farmer"
-                        required>
-                </label>
-                <label for="marital-status">Marital Status <span class="required">*</span><br>
-                    <input type="radio" name="marital-status" value="single" required> <span class="radio-text">Single</span>
-                    <input type="radio" name="marital-status" value="married" checked required><span class="radio-text">Married</span>
-                    <input type="radio" name="marital-status" value="divorced" required><span class="radio-text">Divorced</span>
-                </label>
-                <button type="submit" class="btn">Save</button>
-                <a href="#" class="btn danger-btn">Cancel</a>
-            </form>
-        </div>
-
-        <div id="contact-info-update" class="overlay">
-            <form method="post" class="update-form">
-                <label for="email">Email <span class="required">*</span>
-                    <input type="email" name="email" class="form-input-field" value="olayinka.raheem16@gmail.com"
-                        required>
-                </label>
-                <label for="phone">Telephone <span class="required">*</span>
-                    <input type="tel" name="phone" class="form-input-field" value="+2348063188534" placeholder="e.g +2348063188534"
-                        required>
-                </label>
-                <label for="res-address">Address <span class="required">*</span>
-                    <input type="text" name="res-address" class="form-input-field" value="10, Davies street"
-                        placeholder="e.g 10, Davies street" required>
-                </label>
-                <label for="city">City <span class="required">*</span>
-                    <input type="text" name="city" class="form-input-field" value="ketu" placeholder="e.g ketu"
-                        required>
-                </label>
-                <label for="state">State <span class="required">*</span>
-                    <input type="text" name="state" class="form-input-field" value="Lagos" placeholder="e.g Lagos"
-                        required>
-                </label>
-                <label for="country">Country <span class="required">*</span>
-                    <input type="text" name="country" class="form-input-field" value="Nigeria" placeholder="e.g Nigeria"
-                        required>
-                </label>
-                <button type="submit" class="btn">Save</button>
-                <a href="#" class="btn danger-btn">Cancel</a>
-            </form>
-        </div>
-
     </main>
     <!-- **/ MAIN SECTION ENDS -->
     <!-- FOOTER SECTION STARTS -->
