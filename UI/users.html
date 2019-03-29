@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Banka- User Accounts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+</head>
+
+<body>
+    <!-- HEADER SECTION STARTS -->
+    <header>
+        <a href="index.html"><span id="brand-name">banka</span></a>
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 224 224" style=" fill:#000000;"
+            id="menu-icon">
+            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
+                stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                <path d="M0,224v-224h224v224z" fill="none"></path>
+                <g fill="#ffffff">
+                    <g>
+                        <path d="M19.2,44.8c-2.30807,-0.03264 -4.45492,1.18 -5.61848,3.17359c-1.16356,1.99358 -1.16356,4.45924 0,6.45283c1.16356,1.99358 3.31041,3.20623 5.61848,3.17359h153.6c2.30807,0.03264 4.45492,-1.18 5.61848,-3.17359c1.16356,-1.99358 1.16356,-4.45924 0,-6.45283c-1.16356,-1.99358 -3.31041,-3.20623 -5.61848,-3.17359zM19.2,89.6c-2.30807,-0.03264 -4.45492,1.18 -5.61848,3.17359c-1.16356,1.99358 -1.16356,4.45924 0,6.45283c1.16356,1.99358 3.31041,3.20623 5.61848,3.17359h153.6c2.30807,0.03264 4.45492,-1.18 5.61848,-3.17359c1.16356,-1.99358 1.16356,-4.45924 0,-6.45283c-1.16356,-1.99358 -3.31041,-3.20623 -5.61848,-3.17359zM19.2,134.4c-2.30807,-0.03264 -4.45492,1.18 -5.61848,3.17359c-1.16356,1.99358 -1.16356,4.45924 0,6.45283c1.16356,1.99358 3.31041,3.20623 5.61848,3.17359h153.6c2.30807,0.03264 4.45492,-1.18 5.61848,-3.17359c1.16356,-1.99358 1.16356,-4.45924 0,-6.45283c-1.16356,-1.99358 -3.31041,-3.20623 -5.61848,-3.17359z"></path>
+                    </g>
+                </g>
+            </g>
+        </svg>
+        <nav class="navigation">
+            <ul>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- **/ HEADER SECTION ENDS -->
+    <!-- MAIN SECTION STARTS -->
+    <main id="main">
+        <section id="dashboard-menu">
+            <span id="open-btn">&plus;</span>
+            <span id="close-btn">&times;</span>
+            <ul id="dashboard-menu-item-container">
+                <li class="dashboard-menu-item"><a href="bank-account-dashboard.html">dashboard</a></li>
+                <li class="dashboard-menu-item"><a href="transactions.html">Transactions</a></li>
+                <li class="dashboard-menu-item"><a href="#">notifications</a></li>
+                <li class="dashboard-menu-item"><a href="banks-accounts">Accounts</a></li>
+                <li class="dashboard-menu-item"><a href="account-search.html">Account operations</a></li>
+                <li class="dashboard-menu-item"><a href="users.html">Users</a></li>
+            </ul>
+        </section>
+        <h2 id="welcome-header">Users</h2>
+        <section id="users">
+            <a href="#new-user" class="btn success-btn">&plus; Create</a>
+            <table class="table">
+                <thead>
+                    <th>S/No</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Type</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                    <th>Options</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Abu Muhammad</td>
+                        <td>abu_muhammad@gmail.com</td>
+                        <td>client</td>
+                        <td>active</td>
+                        <td>2019-03-27</td>
+                        <td>
+                            <a href="#user-detail" class="view">view</a>
+                            <a href="#activate-prompt" class="activate">activate</a>
+                            <a href="#deactivate-prompt" class="deactivate">deactivate</a>
+                            <a href="#delete-prompt" class="delete">delete</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Christopher Okoro</td>
+                        <td>christokoro@mail.com</td>
+                        <td>client</td>
+                        <td>active</td>
+                        <td>2019-03-27</td>
+                        <td>
+                            <a href="#user-detail" class="view">view</a>
+                            <a href="#activate-prompt" class="activate">activate</a>
+                            <a href="#deactivate-prompt" class="deactivate">deactivate</a>
+                            <a href="#delete-prompt" class="delete">delete</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Ade Adesemowo</td>
+                        <td>ade_ade@mail.com</td>
+                        <td>client</td>
+                        <td>active</td>
+                        <td>2019-03-23</td>
+                        <td>
+                            <a href="#user-detail" class="view">view</a>
+                            <a href="#activate-prompt" class="activate">activate</a>
+                            <a href="#deactivate-prompt" class="deactivate">deactivate</a>
+                            <a href="#delete-prompt" class="delete">delete</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Abubakar Muhammad</td>
+                        <td>a.muhammad@mail.com</td>
+                        <td>Staff</td>
+                        <td>active</td>
+                        <td>2019-03-27</td>
+                        <td>
+                            <a href="#user-detail" class="view">view</a>
+                            <a href="#activate-prompt" class="activate">activate</a>
+                            <a href="#deactivate-prompt" class="deactivate">deactivate</a>
+                            <a href="#delete-prompt" class="delete">delete</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Chris Okoro</td>
+                        <td>okorochris@mail.com</td>
+                        <td>staff</td>
+                        <td>active</td>
+                        <td>2019-03-27</td>
+                        <td>
+                            <a href="#user-detail" class="view">view</a>
+                            <a href="#activate-prompt" class="activate">activate</a>
+                            <a href="#deactivate-prompt" class="deactivate">deactivate</a>
+                            <a href="#delete-prompt" class="delete">delete</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Adekoya Adesemowo</td>
+                        <td>adekoya.a@mail.com</td>
+                        <td>admin</td>
+                        <td>active</td>
+                        <td>2019-03-23</td>
+                        <td>
+                            <a href="#user-detail" class="view">view</a>
+                            <a href="#activate-prompt" class="activate">activate</a>
+                            <a href="#deactivate-prompt" class="deactivate">deactivate</a>
+                            <a href="#delete-prompt" class="delete">delete</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <div id="user-detail" class="overlay">
+            <!-- <a href="#" class="btn">&times;</a> -->
+            <div>
+                <a href="#" class="btn">&times;</a>
+                <img src="./images/pp.jpg" alt="profile_pics" class="profile-image">
+                <section id="basic-information">
+                    <h3 class="section-header">User Information</h3>
+                    <ul class="section-information">
+                        <li>Firstname: Olayinka</li>
+                        <li>Lastname: Kareem</li>
+                        <li>Email: olayinka.raheem16@gmail.com</li>
+                        <li>Gender: Male</li>
+                        <li>Nationality: Nigerian</li>
+                        <li>Contact Phone: +2348063188534</li>
+                        <li>Role: Client</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+        <div id="delete-prompt" class="action-confirmation-overlay">
+            <div id="delete-message-container">
+                <h3>Are you sure you want to delete this user account?</h3>
+                <a href="#" class="btn normal-btn">Cancel</a>
+                <a href="#" class="btn danger-btn">Delete</a>
+            </div>
+        </div>
+        <div id="deactivate-prompt" class="action-confirmation-overlay">
+            <div id="delete-message-container">
+                <h3>Are you sure you want to deactivate this user account?</h3>
+                <a href="#" class="btn normal-btn">Cancel</a>
+                <a href="#" class="btn danger-btn">Deactivate</a>
+            </div>
+        </div>
+        <div id="activate-prompt" class="action-confirmation-overlay">
+            <div id="delete-message-container">
+                <h3>Are you sure you want to activate this user account?</h3>
+                <a href="#" class="btn normal-btn">Cancel</a>
+                <a href="#" class="btn success-btn">Yes</a>
+            </div>
+        </div>
+        <div id="new-user" class="overlay">
+            <div>
+                <a href="#" class="btn">&times;</a>
+                <form id="account-form" method="post" action="bank-account-dashboard.html">
+                    <fieldset>
+                        <legend> New User information </legend>
+                        <label for="firstname">First Name <span class="required">*</span>
+                            <input type="text" name="firstname" class="form-input-field" placeholder="Enter your firstname" required>
+                        </label>
+                        <label for="lastname">Lastname <span class="required">*</span>
+                            <input type="text" name="lastname" class="form-input-field" placeholder="Enter your lastame" required>
+                        </label>
+                        
+                        <label for="gender">Gender <span class="required">*</span><br>
+                            <input type="radio" name="gender" id="male" class="" value="male" required> <span class="radio-text"><label
+                                    for="male">Male</label></span>
+                            <input type="radio" name="gender" id="female" class="" value="female" required> <span class="radio-text"><label
+                                    for="female">Female</label></span>
+                        </label>
+                        <label for="user-type">User Type <span class="required">*</span>
+                            <select name="user-type" class="form-input-field" required>
+                                <option value="">-- user type --</option>
+                                <option value="1">Super Admin</option>
+                                <option value="2">Admin</option>
+                                <option value="3">Cashier</option>
+                                <option value="4">Client</option>
+                            </select>
+                        </label>
+                        <label for="email">Email <span class="required">*</span>
+                            <input type="email" name="email" class="form-input-field" placeholder="username@mail.com" required>
+                        </label>
+                        <label for="recovery-email">Recorvery Email <span class="required">*</span>
+                            <input type="email" name="recovery-email" class="form-input-field" placeholder="username@mail.com" required>
+                        </label>
+                        <label for="password">Password <span class="required">*</span>
+                            <input type="password" name="password" class="form-input-field" placeholder="Password" required>
+                        </label>
+                    </fieldset>
+                    <button type="submit" class="btn btn-full-width large-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <!-- **/ MAIN SECTION ENDS -->
+    <!-- FOOTER SECTION STARTS -->
+    <footer>
+        <p>&copy; 2019. Built and Designed With <span class="heart-color">&#9829;</span> By Olayinka.</p>
+    </footer>
+    <!-- **/ FOOTER SECTION ENDS -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

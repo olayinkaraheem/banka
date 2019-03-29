@@ -372,7 +372,7 @@ option {
 }
 
 /* Accounts page styles */
-#accounts {
+#accounts, #users {
     display: flex;
     max-width: 80vw;
     margin: 0 auto;
@@ -394,12 +394,7 @@ option {
     color: var(--gold);
 }
 
-/* 
-#account-detail {
-    
-} */
-
-#account-detail div {
+#account-detail div, #user-detail div, #new-user div {
     box-shadow: 0 0 2px var(--white);
     height: 70vh;
     margin: 2em auto;
@@ -407,46 +402,29 @@ option {
     background-color: var(--purple);
     border-radius: 10px;
     overflow-y: scroll;
-    /* box-sizing: content-box; */
     box-sizing: c-box;
     padding: 5px;
-    /* width: inherit; */
-    /* height: inherit; */
 }
 
-#account-detail div::-webkit-scrollbar {
+#account-detail div::-webkit-scrollbar, #user-detail div::-webkit-scrollbar, #new-user div::-webkit-scrollbar {
     width: 0 !important;
 }
 
-#account-detail section {
+#account-detail section, #user-detail section, #new-user section {
     margin: 3em auto;
-    /* text-align: initial; */
     line-height: 2em;
     max-width: 40vw;
 }
 
-#account-detail div .section-information {
-    /* color: var(--purple); */
-}
-
 #delete-message-container {
     padding: 1em;
-    /* background-color: var(--white); */
     background-color: var(--purple);
-    /* background: visible; */
-    /* height: 30vh; */
     width: 20vw;
     margin: 0 auto;
     box-shadow: 0 0 2px var(--white);
 }
 
-#account-detail a {
-    /* position: absolute;
-    right: 15px;
-    top: 15px; */
-    /* position: relative;
-    left: 22em;
-    top: -7em; */
+#account-detail a, #user-detail a, #new-user a {  
     position: absolute;
     right: 31vw;
     top: 9vh;
@@ -461,6 +439,19 @@ option {
     font-weight: lighter;
 }
 
+/* users page styles */
+#users {
+    flex-direction: column;
+}
+
+#users a {
+    align-self: flex-end;
+    margin-bottom: 1em;
+}
+
+#new-user div form {
+    box-shadow: none;
+}
 
 /* Buttons styles */
 .btn {
@@ -481,6 +472,14 @@ option {
 
 .danger-btn {
     background-color: var(--red);
+}
+
+.success-btn {
+    background-color: #00AA00;
+    border: none !important;
+}
+.warning-btn {
+    color: var(--lighter-purple);
 }
 
 /* Misc Styles */
@@ -511,7 +510,7 @@ option {
     width: 100%;
 }
 
-.delete-overlay {
+.action-confirmation-overlay {
   background: rgba(0, 0, 0, 0.5);
   z-index: 1;
   position: absolute;
@@ -538,7 +537,7 @@ option {
   visibility: hidden;
 }
 
-.delete-overlay:target {
+.action-confirmation-overlay:target {
   visibility: visible;
   opacity: 1;
   top: 10vh;
@@ -550,7 +549,21 @@ option {
   top: 10vh;
 }
 
+.activate {
+    color: var(--green);
+}
 
+.deactivate {
+    color: var(--lighter-purple);
+}
+
+.delete {
+    color: var(--red);
+}
+
+.view {
+    color: var(--gold);
+}
 /* .hide-menu {
     transform: translate(-25vw, 0) !important;
     transition: transform 500ms ease-in-out;
@@ -647,35 +660,33 @@ option {
         margin: 0 auto;
     }
 
-    #accounts {
+    #accounts, #users {
         display: flex;
         max-width: 95vw;
         margin: 0 auto;
     }
 
-    #account-detail {
+    #account-detail, #new-user {
         padding-top: 0;
     }
     
-    #account-detail div {
+    #account-detail div, #user-detail div, #new-user div {
         width: 90vw;
     }
 
-    #account-detail a {
+    #account-detail a, #user-detail a, #new-user a {
         position: absolute;
         right: 8vw;
         top: 6vh;
-        /* border-radius: 50%; */
     }
 
-    #account-detail section {
+    #account-detail section, #user-detail section, #new-user section {
         margin: 3em auto;
-        /* text-align: initial; */
         line-height: 2em;
         width: inherit;
     }
 
-    #account-detail section ul {
+    #account-detail section ul, #user-detail section ul {
         list-style-type: none;
         text-align: initial;
     }
@@ -700,7 +711,6 @@ option {
     #dashboard {
         display: flex;
         width: 80vw;
-        /* justify-content: space-between; */
         flex-wrap: wrap;
         margin: 0 auto;
     }
