@@ -7,7 +7,7 @@
     --red: #DB2B30;
     --white: #fff;
     --gold: gold;
-    --green: #00FF00;
+    --green: #00AA00;
 }
 
 /* Re-setting all default values */
@@ -135,6 +135,10 @@ section #form-container {
     display: flex;
     align-content: center;
     justify-content: center;
+}
+
+#account-search-form-container {
+    margin-bottom: 2em;
 }
 
 form p {
@@ -270,6 +274,10 @@ option {
     border-radius: 50%;
 }
 
+#profile-information {
+    padding-bottom: 2em;
+}
+
 #profile-information section {
     margin: 3em auto;
     text-align: initial;
@@ -325,11 +333,12 @@ option {
 }
 
 .debit {
-    background-color: var(--red);
+    background-color: var(--red) !important;
 }
 
 .credit {
-    background-color: var(--green);
+    background-color: var(--green) !important;
+    border: none !important;
 }
 
 /* Dashboard Styles */
@@ -523,7 +532,7 @@ option {
   bottom: 0;
   left: 0;
   right: 0;
-  /* padding-top: 8vh; */
+  padding-top: 8vh;
   transition: opacity 1000ms;
   transition: top 1000ms;
   visibility: hidden;
@@ -642,6 +651,10 @@ option {
         display: flex;
         max-width: 95vw;
         margin: 0 auto;
+    }
+
+    #account-detail {
+        padding-top: 0;
     }
     
     #account-detail div {

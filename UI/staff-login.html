@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Banka- Index</title>
+    <title>Banka- Admin Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
 </head>
@@ -23,26 +23,32 @@
         </svg>
         <nav class="navigation">
             <ul>
-                <li><a href="signup.html">Signup</a></li>
-                <li><a href="login.html">User</a></li>
-                <li><a href="staff-login.html">Admin</a></li>
+                <!-- <li><a href="login.html">Login</a></li> -->
             </ul>
         </nav>
     </header>
-    <!-- **/ HEADER SECTION HEADS -->
+    <!-- **/ HEADER SECTION ENDS -->
     <!-- MAIN SECTION STARTS -->
     <main id="main">
-        <section id="welcome">
-            <h2 id="welcome-header">Welcome to Banka</h2>
-            <a href="signup.html" class="btn large-btn">Click Here To Begin</a>
+        <section id="form-container">
+            <h2 id="welcome-header">Staff Login</h2>
+            <form id="signup-form" method="post" action="staff-login-landing.html">
+                <label for="email">Email <span class="required">*</span>
+                    <input type="email" name="email" class="form-input-field" placeholder="Enter your email">
+                </label>
+                <label for="password">Password <span class="required">*</span>
+                    <input type="password" name="password" class="form-input-field" placeholder="Enter your password">
+                </label>
+                <button type="submit" class="btn btn-full-width large-btn">Proceed</button>
+            </form>
         </section>
     </main>
-    <!-- MAIN SECTION ENDS -->
+    <!-- **/ MAIN SECTION ENDS -->
     <!-- FOOTER SECTION STARTS -->
     <footer>
         <p>&copy; 2019. Built and Designed With <span style="color:red">&#9829;</span> By Olayinka.</p>
     </footer>
-    <!-- FOOTER SECTION ENDS -->
+    <!-- **/ FOOTER SECTION ENDS -->
     <script src="js/main.js"></script>
 </body>
 </html>
