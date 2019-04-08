@@ -4,7 +4,11 @@
   "description": "A light-weight core banking application that powers banking operations like account creation, customer deposit and withdrawals",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha \"./{,!(node_modules)/**/}*.test.js\" --require @babel/register --require @babel/polyfill --timeout 10000 --exit",
+    "generate-lcov": "nyc report --reporter=text-lcov > lcov.info",
+    "coveralls-coverage": "coveralls < lcov.info",
+    "codeclimate-coverage": "codeclimate-test-reporter < lcov.info",
+    "coverage": "nyc npm run test && npm run generate-lcov && npm run coveralls-coverage && npm run codeclimate-coverage",
     "start": "nodemon --exec babel-node src/index.js"
   },
   "keywords": [],
