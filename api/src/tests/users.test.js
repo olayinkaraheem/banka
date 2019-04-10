@@ -49,4 +49,24 @@ describe('Users', () => {
         });
     });
   });
+
+  describe('/POST Login A User', () => {
+    it('It should log a user in', done => {
+      const user = {
+        email: 'admin@banka.com',
+        password: 'adminpass@421'
+      };
+      chai
+        .request(app)
+        .post('/api/v1/auth/login')
+        .send(user)
+        .end((err, res) => {
+          expect(user).to.have.property('email');
+          expect(user).to.have.property('password');
+          res.should.have.status(200);
+          expect(res.body).to.be.an('object');
+          done();
+        });
+    });
+  });
 });

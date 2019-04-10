@@ -9,6 +9,6 @@ export default class UsersController {
     if (!new_user.error) {
       return res.status(new_user.code).send({ status: 201, data: new_user.data });
     }
-    return res.status(new_user.code).send({ status: 401, message: new_user.message });
+    return res.status(new_user.code).send({ status: 401, error: new_user.message });
   }
 }

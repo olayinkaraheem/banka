@@ -13,7 +13,7 @@ export const recordExists = (model, data, key) => {
 };
 
 /**
- * Get the last ID from a list of resources
+ * Gets the last ID from a list of resources
  * @param {object} model
  * @returns {number}
  */
@@ -22,4 +22,14 @@ export const getLastId = model => {
     return item.id;
   });
   return Math.max(...ids);
+};
+
+/**
+ * Generates random token
+ * @param null
+ * @returns {string} token
+ */
+export const generateToken = () => {
+  const token = '45erkjherht45495783';
+  return token;
 };
