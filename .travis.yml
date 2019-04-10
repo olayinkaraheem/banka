@@ -1,0 +1,31 @@
+language: node_js
+node_js:
+  - "stable"
+cache:
+  directories:
+   - "api/node_modules"
+env:
+  - NODE_ENV=test
+  global: CODECLIMATE_REPO_TOKEN=9e1084b426962c903bae5aed626cbd14e2248d142c6234a4001ca6d1f4b0776b
+install:
+  - cd api
+  - npm install
+services:
+  - postgresql  
+before_script:
+  - psql -c 'create database book-a-meal;' -U postgres
+  - cd database
+  - sequelize db:migrate
+  - sequelize db:seed:all
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+script:
+  # - npm test:travis
+  - npm run coverage
+after_success:
+    - npm run coverage
+    - npm install codeclimate-test-reporter
+    - codeclimate-test-reporter < coverage/lcov.info
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT  
