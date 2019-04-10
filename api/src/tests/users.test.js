@@ -21,9 +21,6 @@ describe('Users', () => {
           Math.random()
             .toString(36)
             .replace(/[^a-zA-Z0-9]+/g, ''),
-        username: Math.random()
-          .toString(36)
-          .replace(/[^a-zA-Z0-9]+/g, ''),
         password: 'anothertestpass2',
         email:
           Math.random()
@@ -42,11 +39,10 @@ describe('Users', () => {
         .end((err, res) => {
           expect(new_user).to.have.property('firstname');
           expect(new_user).to.have.property('lastname');
-          expect(new_user).to.have.property('username');
           expect(new_user).to.have.property('password');
           expect(new_user).to.have.property('email');
           expect(new_user).to.have.property('type');
-          new_user.role.should.equal(3);
+          new_user.type.should.equal(3);
           res.should.have.status(201);
           expect(res.body).to.be.an('object');
           done();
