@@ -58,7 +58,7 @@ describe('Users', () => {
       };
       chai
         .request(app)
-        .post('/api/v1/auth/login')
+        .post('/api/v1/auth/signin')
         .send(user)
         .end((err, res) => {
           expect(user).to.have.property('email');
