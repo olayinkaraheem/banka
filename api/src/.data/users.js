@@ -8,7 +8,8 @@ export const users = [
     type: 'staff',
     isAdmin: true,
     created_at: '2019-04-07 07:00:43',
-    updated_at: ''
+    updated_at: '',
+    token: '45erkjherht45495783'
   },
   {
     id: 2,
@@ -19,7 +20,8 @@ export const users = [
     type: 'staff',
     isAdmin: false,
     created_at: '2019-04-07 07:00:43',
-    updated_at: ''
+    updated_at: '',
+    token: '45erkjherht45495783'
   },
   {
     id: 3,
@@ -30,6 +32,7 @@ export const users = [
     type: 'client',
     isAdmin: false,
     created_at: '2019-04-07 07:00:43',
-    updated_at: ''
+    updated_at: '',
+    token: '45erkjherht45495783'
   }
 ];

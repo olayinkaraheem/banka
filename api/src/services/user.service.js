@@ -1,6 +1,6 @@
 // import User from '../models/user.model';
 import { users } from '../.data/users';
-import { recordExists, getLastId } from '../Helpers/helpers';
+import { recordExists, getLastId, generateToken } from '../Helpers/helpers';
 
 /**
  * @exports
@@ -35,6 +35,7 @@ export default class UserService {
     const allUsers = this.getAllUsers();
     const newId = getLastId(allUsers) + 1;
     const email_exists = recordExists(allUsers, user, 'email');
+    const token = generateToken();
     if (email_exists) {
       return { message: 'Email already exist', error: true, code: 401 };
     } else {
@@ -42,7 +43,7 @@ export default class UserService {
         message: 'Signup successful',
         error: false,
         code: 201,
-        data: { id: newId, ...user }
+        data: { token, id: newId, ...user }
       };
     }
   }
