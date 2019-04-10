@@ -37,7 +37,6 @@ describe('Users', () => {
         .post('/api/v1/auth/signup')
         .send(new_user)
         .end((err, res) => {
-          //   console.log(res);
           expect(new_user).to.have.property('firstname');
           expect(new_user).to.have.property('lastname');
           expect(new_user).to.have.property('password');
