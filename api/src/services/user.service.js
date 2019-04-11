@@ -79,4 +79,24 @@ export default class UserService {
       }
     }
   }
+
+  /**
+   * Gets user information.
+   * @param {number} userId
+   * @returns {object}
+   */
+  getUserInfo(userId) {
+    const userInfo = this.getAllUsers().filter(user => user.id === userId);
+
+    if (!userInfo.length) {
+      return { message: 'User information not found', error: true, code: 404 };
+    } else {
+      return {
+        message: 'User Information Found',
+        error: false,
+        code: 200,
+        data: { ...userInfo[0] }
+      };
+    }
+  }
 }

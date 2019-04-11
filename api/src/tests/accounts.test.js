@@ -12,7 +12,7 @@ describe('Accounts', () => {
     it('It should create a new bank account', done => {
       const new_account = {
         owner: 3, // user id
-        type: 'savings' // savings, current
+        type: 'current' // savings, current
       };
       chai
         .request(app)
@@ -23,12 +23,12 @@ describe('Accounts', () => {
           expect(new_account).to.have.property('owner');
           res.should.have.status(201);
           expect(res.body).to.be.an('object');
-          res.body.to.have.property('firstName');
-          res.body.to.have.property('lastName');
-          res.body.to.have.property('status');
-          res.body.to.have.property('accountNumber');
-          res.body.to.have.property('email');
-          res.body.to.have.property('openingBalance');
+          expect(res.body).to.have.property('status');
+          expect(res.body).to.have.property('firstName');
+          expect(res.body).to.have.property('lastName');
+          expect(res.body).to.have.property('accountNumber');
+          expect(res.body).to.have.property('email');
+          expect(res.body).to.have.property('openingBalance');
           done();
         });
     });
