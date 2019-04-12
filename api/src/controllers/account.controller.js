@@ -19,9 +19,11 @@ export default class AccountController {
     const updatedAccount = account.updateAccountStatus({ status, accountNumber }, userId);
 
     if (!updatedAccount.error) {
-      return res
-        .status(updatedAccount.code)
-        .send({ status: updatedAccount.code, data: updatedAccount.data });
+      const response =
+        req.body.status === 'deleted'
+          ? { status: updatedAccount.code, message: updatedAccount.message }
+          : { status: updatedAccount.code, data: updatedAccount.data };
+      return res.status(updatedAccount.code).send(response);
     }
     return res
       .status(updatedAccount.code)

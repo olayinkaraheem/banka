@@ -93,14 +93,37 @@ export default class AccountService {
         return account.accountNumber === parseInt(update.accountNumber);
       });
       if (accountToUpdate.length) {
-        accountToUpdate[0].status = accountToUpdate[0].status === 'active' ? 'dormant' : 'active';
+        const allowedStatuses = ['deleted', 'dormant', 'active'];
+        if (!allowedStatuses.includes(update.status)) {
+          return {
+            message: `Unidentified status specified`,
+            error: true,
+            code: 400
+          };
+        }
+        if (update.status === 'deleted') {
+          accountToUpdate[0].status = 'deleted';
+          return {
+            message: `Account deleted successfully`,
+            error: false,
+            code: 200
+          };
+        } else {
+          accountToUpdate[0].status = accountToUpdate[0].status === 'active' ? 'dormant' : 'active';
+          return {
+            message: `Account Status successfully updated to '${accountToUpdate[0].status}'`,
+            error: false,
+            code: 200,
+            data: { ...accountToUpdate[0] }
+          };
+        }
+      } else {
+        return {
+          message: `Account number ${update.accountNumber} does not exist`,
+          error: true,
+          code: 404
+        };
       }
-      return {
-        message: `Account Status successfully updated to '${accountToUpdate[0].status}'`,
-        error: false,
-        code: 200,
-        data: { ...accountToUpdate[0] }
-      };
     } else {
       return {
         message: 'You are not authorized to perform this action.',
