@@ -82,5 +82,23 @@ describe('Accounts', () => {
           done();
         });
     });
+
+    it('It should set a bank account to deleted status', done => {
+      const account_status = {
+        status: 'deleted',
+        userId: 1
+      };
+      chai
+        .request(app)
+        .delete('/api/v1/account/1233445642')
+        .send(account_status)
+        .end((err, res) => {
+          expect(account_status).to.have.property('status');
+          res.should.have.status(204);
+          expect(res.body).to.be.an('object');
+          expect(res.body).to.have.property('message');
+          done();
+        });
+    });
   });
 });
