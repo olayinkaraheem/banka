@@ -7,5 +7,6 @@ const router = express.Router();
 
 router.post('/accounts', accountController.createAccount);
 router.patch('/account/:accountNumber', accountController.updateAccountStatus);
+router.delete('/account/:accountNumber', accountController.updateAccountStatus);
 
 export default router;

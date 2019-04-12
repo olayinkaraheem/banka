@@ -94,7 +94,7 @@ describe('Accounts', () => {
         .send(account_status)
         .end((err, res) => {
           expect(account_status).to.have.property('status');
-          res.should.have.status(204);
+          res.should.have.status(200);
           expect(res.body).to.be.an('object');
           expect(res.body).to.have.property('message');
           done();
