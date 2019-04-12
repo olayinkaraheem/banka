@@ -1,3 +1,4 @@
 /api/node_modules
 /api/.nyc_output
-/api/lcov.info
+/api/lcov.info/
+/api/.env

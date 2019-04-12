@@ -1,4 +1,3 @@
-import { users } from '../.data/users';
 import { accounts } from '../.data/accounts';
 import { recordExists, getLastId } from '../Helpers/helpers';
 import UserService from './user.service';
@@ -14,7 +13,6 @@ export default class AccountService {
    * @memberof AccountService
    */
   constructor() {
-    this.users = users;
     this.accounts = accounts;
   }
 
@@ -54,7 +52,7 @@ export default class AccountService {
           id: newId,
           accountNumber: account_number,
           type: accountInfo.type,
-          openingBalance: parseFloat(0.00),
+          openingBalance: parseFloat(0.0),
           createdOn: new Date(),
           owner: id,
           firstName,
@@ -79,34 +77,36 @@ export default class AccountService {
   }
 
   /**
-   * Logs in a user.
-   * @param {object} user
+   * Activates/Deactvate a bank account.
+   * @param {number} userId
+   * @param {object} update
    * @returns {object}
    */
-  loginUser(user) {
-    const allUsers = this.getAllUsers();
-    const email_exists = recordExists(allUsers, user, 'email');
-    // const token = generateToken();
-    if (!email_exists) {
-      return { message: 'Users With This Email Does Not exist', error: true, code: 404 };
-    } else {
-      const validUser = allUsers.filter(db_user => {
-        return user.password === db_user.password && user.email === db_user.email;
+  updateAccountStatus(update, userId) {
+    const users = new UserService();
+    const allUsers = users.getAllUsers();
+    const validUser = allUsers.filter(db_user => {
+      return userId === db_user.id && db_user.isAdmin === true;
+    });
+    if (validUser.length) {
+      const accountToUpdate = this.accounts.filter(account => {
+        return account.accountNumber === parseInt(update.accountNumber);
       });
-      if (validUser.length) {
-        return {
-          message: 'Login successful',
-          error: false,
-          code: 200,
-          data: { ...validUser[0] }
-        };
-      } else {
-        return {
-          message: 'Login Failed. Please enter a valid password',
-          error: true,
-          code: 401
-        };
+      if (accountToUpdate.length) {
+        accountToUpdate[0].status = accountToUpdate[0].status === 'active' ? 'dormant' : 'active';
       }
+      return {
+        message: `Account Status successfully updated to '${accountToUpdate[0].status}'`,
+        error: false,
+        code: 200,
+        data: { ...accountToUpdate[0] }
+      };
+    } else {
+      return {
+        message: 'You are not authorized to perform this action.',
+        error: true,
+        code: 403
+      };
     }
   }
 }

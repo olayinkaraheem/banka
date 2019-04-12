@@ -6,6 +6,6 @@ const accountController = new AccountController();
 const router = express.Router();
 
 router.post('/accounts', accountController.createAccount);
-// router.post('/signin', accountController.loginUser);
+router.patch('/account/:accountNumber', accountController.updateAccountStatus);
 
 export default router;
