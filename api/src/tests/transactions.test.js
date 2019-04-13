@@ -18,7 +18,7 @@ describe('Transactions', () => {
 
       chai
         .request(app)
-        .post('/api/v1/transaction/1233445642/debit')
+        .post('/api/v1/transaction/1233445643/debit')
         .send(transaction_detail)
         .end((err, res) => {
           expect(transaction_detail).to.have.property('type');
@@ -27,7 +27,6 @@ describe('Transactions', () => {
           res.should.have.status(200);
           expect(res.body).to.be.an('object');
           expect(res.body.data).to.have.property('transactionId');
-          expect(res.body.data).to.have.property('type');
           expect(res.body.data).to.have.property('amount');
           expect(res.body.data).to.have.property('cashier');
           expect(res.body.data).to.have.property('transactionType');

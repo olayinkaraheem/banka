@@ -52,7 +52,7 @@ export default class AccountService {
           id: newId,
           accountNumber: account_number,
           type: accountInfo.type,
-          openingBalance: parseFloat(0.0),
+          openingBalance: parseFloat('0.00'),
           createdOn: new Date(),
           owner: id,
           firstName,
