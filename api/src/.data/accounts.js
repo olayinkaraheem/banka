@@ -7,5 +7,14 @@ export const accounts = [
     type: 'savings', // savings, current
     status: 'active', // draft, active, or dormant
     balance: 1234125.0
+  },
+  {
+    id: 2,
+    accountNumber: 1233445643,
+    createdOn: '2019-04-10 12:35:00',
+    owner: 5, // user id
+    type: 'savings', // savings, current
+    status: 'active', // draft, active, or dormant
+    balance: 1234125.0
   }
 ];
