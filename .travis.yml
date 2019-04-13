@@ -3,10 +3,11 @@ node_js:
   - "stable"
 cache:
   directories:
-   - "api/node_modules"
+    - "api/node_modules"
 env:
-  - NODE_ENV=test
-  global: CODECLIMATE_REPO_TOKEN=9e1084b426962c903bae5aed626cbd14e2248d142c6234a4001ca6d1f4b0776b
+  global:
+    - CODECLIMATE_REPO_TOKEN=11100aa690400a9d020d5cfdb4e1cd8b7972da13a00479e4ccb32e80dd21b6ab
+    - NODE_ENV=test
 install:
   - cd api
   - npm install
@@ -19,8 +20,8 @@ script:
   # - npm test:travis
   - npm run coverage
 after_success:
-    - npm run coverage
-    - npm install codeclimate-test-reporter
-    - codeclimate-test-reporter < coverage/lcov.info
+  - npm run coverage
+  - npm install codeclimate-test-reporter
+  - codeclimate-test-reporter < coverage/lcov.info
 after_script:
-  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT  
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
