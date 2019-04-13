@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 
 app.use('/api/v1/auth', UserRoutes);
 app.use('/api/v1/', AccountRoutes);
-app.use('/api/v1/transaction', TransactionRoutes);
+app.use('/api/v1/transactions', TransactionRoutes);
 
 app.get('/', (req, res) => {
   res.send('Welcome');

@@ -18,7 +18,7 @@ describe('Transactions', () => {
 
       chai
         .request(app)
-        .post('/api/v1/transaction/1233445643/debit')
+        .post('/api/v1/transactions/1233445643/debit')
         .send(transaction_detail)
         .end((err, res) => {
           expect(transaction_detail).to.have.property('type');
@@ -45,7 +45,7 @@ describe('Transactions', () => {
 
       chai
         .request(app)
-        .post('/api/v1/transaction/1233445643/credit')
+        .post('/api/v1/transactions/1233445643/credit')
         .send(transaction_detail)
         .end((err, res) => {
           expect(transaction_detail).to.have.property('type');
