@@ -46,7 +46,6 @@ export default class TransactionService {
       if (account.length) {
         const accountBalance = account[0].balance;
         const transactionAmount = transactionInfo.amount;
-        console.log(accountBalance, transactionAmount);
         const debitable = accountBalance - transactionAmount >= 0 ? true : false;
 
         if (account[0].status === 'dormant' || account[0].status === 'deleted') {
@@ -61,9 +60,10 @@ export default class TransactionService {
           const transactionId = getLastId(this.getAllTransactions()) + 1;
           const oldAccountBalance = accountBalance;
           let newAccountBalance = accountBalance;
-          console.log(debitable, transactionInfo.type.toLowerCase());
           if (debitable && transactionInfo.type.toLowerCase() === 'debit') {
             newAccountBalance = accountBalance - transactionAmount;
+          } else if (transactionInfo.type.toLowerCase() === 'credit') {
+            newAccountBalance = accountBalance + transactionAmount;
           } else {
             return {
               message: 'Insufficient balance.',
