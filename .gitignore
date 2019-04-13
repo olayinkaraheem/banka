@@ -2,3 +2,4 @@
 /api/.nyc_output
 /api/lcov.info/
 /api/.env
+/api/dist
