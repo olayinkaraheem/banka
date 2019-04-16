@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "A light-weight core banking application that powers banking operations like account creation, customer deposit and withdrawals",
   "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olayinkaraheem/banka.git"
+  },
   "scripts": {
     "test": "mocha \"./{,!(node_modules)/**/}*.test.js\" --require @babel/register --require @babel/polyfill --timeout 10000 --exit",
     "test-watch": "nodemon --exec \"npm test\"",
