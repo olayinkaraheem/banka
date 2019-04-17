@@ -7,6 +7,8 @@
     <title>Banka- Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
 </head>
 
 <body>
@@ -29,41 +31,140 @@
         <nav class="navigation">
             <ul>
                 <!-- <li><a href="bank-account-dashboard.html">Dashboard</a></li> -->
-                <li><a href="login.html">Logout</a></li>
+                <li><a href="index.html">Logout</a></li>
             </ul>
         </nav>
     </header>
     <!-- **/ HEADER SECTION ENDS -->
     <!-- MAIN SECTION STARTS -->
-    <main id="main">
+    <main id="dashboard-main">
         <section id="dashboard-menu">
             <span id="open-btn">&plus;</span>
             <!-- <span id="close-btn">&times;</span> -->
             <ul id="dashboard-menu-item-container">
-                <li class="dashboard-menu-item"><a href="bank-account-dashboard.html">dashboard</a></li>
+                <li class="dashboard-menu-item active"><a href="bank-account-dashboard.html">dashboard</a></li>
                 <li class="dashboard-menu-item"><a href="transactions.html">Transactions</a></li>
                 <li class="dashboard-menu-item"><a href="#">notifications</a></li>
                 <li class="dashboard-menu-item"><a href="profile.html">profile</a></li>
             </ul>
         </section>
-        <h2 id="welcome-header">Welcome</h2>
         <section id="dashboard">
-            <section id="balance">
-                <h3 class="section-header">Account Balance</h3>
-                <div class="count">N1,200,550.00</div>
-                <a href="#" class="dashboard-view-more">view</a>
-            </section>
-            <section id="transaction-detail">
-                <h3 class="section-header">Transactions</h3>
-                <div class="count">223</div>
-                <a href="transactions.html" class="dashboard-view-more">view</a>
-            </section>
-            <section id="dashboard-account-detail">
-                <h3 class="section-header">Accounts</h3>
-                <div class="count">1</div>
-                <a href="profile.html#account-information" class="dashboard-view-more">view</a>
-            </section>
+            <h2 id="welcome-header">Welcome, Smith.</h2>
+            <div class="cards">
+                <section id="balance">
+                    <h3 class="section-header">Processed</h3>
+                    <div class="count">N1,200,550.00</div>
+                    <a href="#" class="dashboard-view-more">view</a>
+                </section>
+                <section id="transaction-detail">
+                    <h3 class="section-header">Transactions</h3>
+                    <div class="count">223</div>
+                    <a href="transactions.html" class="dashboard-view-more">view</a>
+                </section>
+                <section id="dashboard-account-detail">
+                    <h3 class="section-header">Accounts</h3>
+                    <div class="count">1</div>
+                    <a href="profile.html#account-information" class="dashboard-view-more">view</a>
+                </section>
+            </div>
+            <div class="transactions">
+                <h2 id="welcome-header">Previous Transactions</h2>
+                <section id="dashboard-transactions">
+                    <table class="table">
+                        <thead>
+                            <th>S/No</th>
+                            <th>Description</th>
+                            <th>Type</th>
+                            <th>Amount (&#8358;)</th>
+                            <th>Date</th>
+                            <th>Options</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Cash transfer to Adele</td>
+                                <td>Debit</td>
+                                <td>5,000.00</td>
+                                <td>2019-03-27</td>
+                                <td>
+                                    <a href="#client-transaction-detail" class="view" title="view"><i
+                                            class="fas fa-eye"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Cash withdrawal | NIP_termianl_Ojoh#32</td>
+                                <td>Debit</td>
+                                <td>10,000.00</td>
+                                <td>2019-03-27</td>
+                                <td>
+                                    <a href="#client-transaction-detail" class="view" title="view"><i
+                                            class="fas fa-eye"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Credit transaction by self</td>
+                                <td>Credit</td>
+                                <td>12,000.00</td>
+                                <td>2019-03-23</td>
+                                <td>
+                                    <a href="#client-transaction-detail" class="view" title="view"><i
+                                            class="fas fa-eye"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Cash transfer to Adele</td>
+                                <td>Debit</td>
+                                <td>5,000.00</td>
+                                <td>2019-03-27</td>
+                                <td>
+                                    <a href="#client-transaction-detail" class="view" title="view"><i
+                                            class="fas fa-eye"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Cash withdrawal | NIP_termianl_Ojoh#32</td>
+                                <td>Debit</td>
+                                <td>10,000.00</td>
+                                <td>2019-03-27</td>
+                                <td>
+                                    <a href="#client-transaction-detail" class="view" title="view"><i
+                                            class="fas fa-eye"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Credit transaction by self</td>
+                                <td>Credit</td>
+                                <td>12,000.00</td>
+                                <td>2019-03-23</td>
+                                <td>
+                                    <a href="#client-transaction-detail" class="view" title="view"><i
+                                            class="fas fa-eye"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
         </section>
+        <div id="client-transaction-detail" class="overlay">
+            <a href="#" class="btn">&times;</a>
+            <div>
+                <h3 class="section-header">Transaction Detail</h3>
+                <ul class="section-information">
+                    <li>Transaction Type: Credit</li>
+                    <li>Depositor: Alan Smith</li>
+                    <li>Trans. Ref: REF00897654321</li>
+                    <li>Comment: Cash deposit from Alan Smith|Unilag Akoka branch</li>
+                    <li>Amount: N5,000</li>
+                    <li>Value date: 21-03-2019</li>
+                </ul>
+            </div>
+        </div>
     </main>
     <!-- **/ MAIN SECTION ENDS -->
     <!-- FOOTER SECTION STARTS -->

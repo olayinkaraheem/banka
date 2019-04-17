@@ -6,6 +6,8 @@
     <title>Banka- Account Search</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
 </head>
 <body>
     <!-- HEADER SECTION STARTS -->
@@ -23,13 +25,13 @@
         </svg>
         <nav class="navigation">
             <ul>
-                <li><a href="staff-login.html">Logout</a></li>
+                <li><a href="index.html">Logout</a></li>
             </ul>
         </nav>
     </header>
     <!-- **/ HEADER SECTION HEADS -->
     <!-- MAIN SECTION STARTS -->
-    <main id="main">
+    <main id="dashboard-main">
         <section id="dashboard-menu">
             <span id="open-btn">&plus;</span>
             <!-- <span id="close-btn">&times;</span> -->
@@ -38,37 +40,42 @@
                 <li class="dashboard-menu-item"><a href="staff-transactions.html">Transactions</a></li>
                 <li class="dashboard-menu-item"><a href="#">notifications</a></li>
                 <li class="dashboard-menu-item"><a href="bank-accounts.html">Accounts</a></li>
-                <li class="dashboard-menu-item"><a href="account-search.html">Account operations</a></li>
+                <li class="dashboard-menu-item active"><a href="account-search.html">Account operations</a></li>
                 <li class="dashboard-menu-item"><a href="users.html">Users</a></li>
             </ul>
         </section>
-        <section id="account-search-form-container">
-            <h2 id="welcome-header">Welcome, <i>Cashier Sean</i> </h2>
-            <form id="account-search-form" method="post" action="">
-                <label for="account">Account Number <span class="required">*</span>
-                    <input type="text" name="account" class="form-input-field" placeholder="Enter account number to search">
-                </label>
-                <button type="submit" class="btn btn-full-width large-btn">Proceed</button>
-            </form>
-        </section>
-        <section id="profile-information">
-            <img src="./images/pp.jpg" alt="profile_pics" class="profile-image">
-
-            <section id="account-information">
-                <h3 class="section-header">Account Information</h3>
-                <ul class="section-information">
-                    <li>Account name: Olayinka Kareem</li>
-                    <li>Account number: 0012345678</li>
-                    <li>Account BVN: 00897654321</li>
-                    <li>Account Type: Savings</li>
-                    <li>Available Balance: N1,200,545.00</li>
-                    <li>Account Creation date: 21-03-2019</li>
-                </ul>
+        <section id="dashboard">
+            <section id="account-search-form-container">
+                <h2 id="welcome-header">Welcome, <i>Cashier Sean</i> </h2>
+                <form id="account-search-form" method="post" action="">
+                    <label for="account">Account Number <span class="required">*</span>
+                        <input type="text" name="account" class="form-input-field" placeholder="Enter account number to search" required>
+                    </label>
+                    <button type="submit" class="btn btn-full-width large-btn"><i class="fas fa-search"></i> &nbsp; Search</button>
+                </form>
             </section>
+
+            <section id="profile-information">
+                <img src="./images/pp.jpg" alt="profile_pics" class="profile-image">
             
-            <a href="#credit-operation" class="btn credit">&plus; Credit Oparation</a>
-            <a href="#debit-operation" class="btn debit">&minus; Debit Operation</a>
+                <section id="account-information">
+                    <h3 class="section-header">Account Information</h3>
+                    <ul class="section-information">
+                        <li>Account name: Olayinka Kareem</li>
+                        <li>Account number: 0012345678</li>
+                        <li>Account BVN: 00897654321</li>
+                        <li>Account Type: Savings</li>
+                        <li>Available Balance: N1,200,545.00</li>
+                        <li>Account Creation date: 21-03-2019</li>
+                    </ul>
+                </section>
+            
+                <a href="#credit-operation" class="btn credit">&plus; Credit Oparation</a>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="#debit-operation" class="btn debit">&minus; Debit Operation</a>
+            </section>
         </section>
+        
         <div id="credit-operation" class="overlay">
             <form method="post" class="update-form" action="credit.html">
                 <h4>Credit Operation</h4>
@@ -93,6 +100,7 @@
                     <textarea name="comment" class="form-input-field" placeholder="Enter transaction comment here..." required></textarea>
                 </label>
                 <button type="submit" class="btn">Credit</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="#" class="btn danger-btn">Cancel</a>
             </form>
         </div>
@@ -116,6 +124,7 @@
                     <textarea name="comment" class="form-input-field" placeholder="Enter transaction comment here..." required></textarea>
                 </label>
                 <button type="submit" class="btn">Debit</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="#" class="btn danger-btn">Cancel</a>
             </form>
         </div>
