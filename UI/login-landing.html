@@ -1,66 +1,127 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Banka- Login</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
-</head>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+  </head>
 
-<body>
+  <body>
     <!-- HEADER SECTION STARTS -->
     <header>
-        <a href="index.html"><span id="brand-name">banka</span></a>
-        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 224 224" style=" fill:#000000;"
-            id="menu-icon">
-            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
-                stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
-                font-size="none" text-anchor="none" style="mix-blend-mode: normal">
-                <path d="M0,224v-224h224v224z" fill="none"></path>
-                <g fill="#ffffff">
-                    <g>
-                        <path d="M19.2,44.8c-2.30807,-0.03264 -4.45492,1.18 -5.61848,3.17359c-1.16356,1.99358 -1.16356,4.45924 0,6.45283c1.16356,1.99358 3.31041,3.20623 5.61848,3.17359h153.6c2.30807,0.03264 4.45492,-1.18 5.61848,-3.17359c1.16356,-1.99358 1.16356,-4.45924 0,-6.45283c-1.16356,-1.99358 -3.31041,-3.20623 -5.61848,-3.17359zM19.2,89.6c-2.30807,-0.03264 -4.45492,1.18 -5.61848,3.17359c-1.16356,1.99358 -1.16356,4.45924 0,6.45283c1.16356,1.99358 3.31041,3.20623 5.61848,3.17359h153.6c2.30807,0.03264 4.45492,-1.18 5.61848,-3.17359c1.16356,-1.99358 1.16356,-4.45924 0,-6.45283c-1.16356,-1.99358 -3.31041,-3.20623 -5.61848,-3.17359zM19.2,134.4c-2.30807,-0.03264 -4.45492,1.18 -5.61848,3.17359c-1.16356,1.99358 -1.16356,4.45924 0,6.45283c1.16356,1.99358 3.31041,3.20623 5.61848,3.17359h153.6c2.30807,0.03264 4.45492,-1.18 5.61848,-3.17359c1.16356,-1.99358 1.16356,-4.45924 0,-6.45283c-1.16356,-1.99358 -3.31041,-3.20623 -5.61848,-3.17359z"></path>
-                    </g>
-                </g>
+      <a href="index.html"><span id="brand-name">banka</span></a>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        x="0px"
+        y="0px"
+        width="30"
+        height="30"
+        viewBox="0 0 224 224"
+        style=" fill:#000000;"
+        id="menu-icon"
+      >
+        <g
+          fill="none"
+          fill-rule="nonzero"
+          stroke="none"
+          stroke-width="1"
+          stroke-linecap="butt"
+          stroke-linejoin="miter"
+          stroke-miterlimit="10"
+          stroke-dasharray=""
+          stroke-dashoffset="0"
+          font-family="none"
+          font-weight="none"
+          font-size="none"
+          text-anchor="none"
+          style="mix-blend-mode: normal"
+        >
+          <path d="M0,224v-224h224v224z" fill="none"></path>
+          <g fill="#ffffff">
+            <g>
+              <path
+                d="M19.2,44.8c-2.30807,-0.03264 -4.45492,1.18 -5.61848,3.17359c-1.16356,1.99358 -1.16356,4.45924 0,6.45283c1.16356,1.99358 3.31041,3.20623 5.61848,3.17359h153.6c2.30807,0.03264 4.45492,-1.18 5.61848,-3.17359c1.16356,-1.99358 1.16356,-4.45924 0,-6.45283c-1.16356,-1.99358 -3.31041,-3.20623 -5.61848,-3.17359zM19.2,89.6c-2.30807,-0.03264 -4.45492,1.18 -5.61848,3.17359c-1.16356,1.99358 -1.16356,4.45924 0,6.45283c1.16356,1.99358 3.31041,3.20623 5.61848,3.17359h153.6c2.30807,0.03264 4.45492,-1.18 5.61848,-3.17359c1.16356,-1.99358 1.16356,-4.45924 0,-6.45283c-1.16356,-1.99358 -3.31041,-3.20623 -5.61848,-3.17359zM19.2,134.4c-2.30807,-0.03264 -4.45492,1.18 -5.61848,3.17359c-1.16356,1.99358 -1.16356,4.45924 0,6.45283c1.16356,1.99358 3.31041,3.20623 5.61848,3.17359h153.6c2.30807,0.03264 4.45492,-1.18 5.61848,-3.17359c1.16356,-1.99358 1.16356,-4.45924 0,-6.45283c-1.16356,-1.99358 -3.31041,-3.20623 -5.61848,-3.17359z"
+              ></path>
             </g>
-        </svg>
-        <nav class="navigation">
-            <ul>
-                <li><a href="login.html">Logout</a></li>
-                <!-- <li><a href="profile.html">Profile</a></li> -->
-            </ul>
-        </nav>
+          </g>
+        </g>
+      </svg>
+      <nav class="navigation">
+        <ul>
+          <li><a href="index.html">Logout</a></li>
+          <!-- <li><a href="profile.html">Profile</a></li> -->
+        </ul>
+      </nav>
     </header>
     <!-- **/ HEADER SECTION ENDS -->
     <!-- MAIN SECTION STARTS -->
-    <main id="main">
-        <section id="banking-section">
-            <!-- <h2 id="welcome-header">Welcome</h2> -->
-            <section id="bank-section-row">
-                <div id="my-bank"><a href="bank-account-dashboard.html">icon<br>My Bank</a></div>
-                <div id="mutual-fund"><a href="#">icon<br>Mutual Fund</a></div>            
-                <div id="wallet"><a href="#">icon<br>Wallet</a></div>
-                <div id="insurance"><a href="#">icon<br>Insurance</a></div>
-            </section>
-            <section id="open-account-link-section">
-                <p><a href="open-bank-account.html">icon<br>Open an instant account</a></p>
-            </section>
-            <section id="login-landing-other-section">
-                <div id="location"><a href="#">icon<br>Find Us</a></div>
-                <div id="notification"><a href="#">icon<br>Notifications</a></div>
-                <div id="get-help"><a href="#">icon<br>Get help</a></div>
-            </section>
+    <main id="dashboard-main">
+      <section id="banking-section-login-user">
+        <h2 id="welcome-header">Welcome, User...</h2>
+
+        <section id="bank-section-row">
+          <div id="my-bank">
+            <a href="bank-account-dashboard.html"
+              ><i class="fas fa-landmark fa-3x"></i> <br /><br />My Bank</a
+            >
+          </div>
+          <div id="mutual-fund">
+            <a href="#"
+              ><i class="fas fa-handshake fa-3x"></i> <br /><br />Mutual Fund</a
+            >
+          </div>
+          <div id="wallet">
+            <a href="#"
+              ><i class="fas fa-wallet fa-3x"></i> <br /><br />Wallet</a
+            >
+          </div>
+          <div id="insurance">
+            <a href="#"
+              ><i class="fas fa-anchor fa-3x"></i><br /><br />Insurance</a
+            >
+          </div>
         </section>
+        <section id="open-account-link-section">
+          <p>
+            <a href="open-bank-account.html"
+              ><i class="fas fa-user fa-2x"></i><br />Open an instant account</a
+            >
+          </p>
+        </section>
+        <section id="login-landing-other-section">
+          <div id="location">
+            <a href="#"
+              ><i class="fas fa-map-marker-alt fa-2x"></i><br />Find Us</a
+            >
+          </div>
+          <div id="notification">
+            <a href="#"
+              ><i class="fas fa-bullhorn fa-2x"></i><br />Notifications</a
+            >
+          </div>
+          <div id="get-help">
+            <a href="#"><i class="fas fa-question fa-2x"></i><br />Get help</a>
+          </div>
+        </section>
+      </section>
     </main>
     <!-- **/ MAIN SECTION ENDS -->
     <!-- FOOTER SECTION STARTS -->
     <footer>
-        <p>&copy; 2019. Built and Designed With <span style="color:red">&#9829;</span> By Olayinka.</p>
+      <p>
+        &copy; 2019. Built and Designed With
+        <span style="color:red">&#9829;</span> By Olayinka.
+      </p>
     </footer>
     <!-- **/ FOOTER SECTION ENDS -->
     <script src="js/main.js"></script>
-</body>
-
+  </body>
 </html>
