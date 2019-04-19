@@ -3,7 +3,6 @@ import chaiHttp from 'chai-http';
 import { app } from '../index';
 
 const expect = chai.expect;
-// const assert = chai.assert;
 const should = chai.should();
 
 chai.use(chaiHttp);

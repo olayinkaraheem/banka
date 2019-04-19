@@ -43,7 +43,6 @@ export default class AccountService {
     } else {
       const account_number =
         Math.max(...this.getAllAccounts().map(account => account.accountNumber)) + 1;
-      // console.log('Account number',account_number);
       const userService = new UserService();
       const userInfo = userService.getUserInfo(accountInfo.owner);
       if (!userInfo.error) {
@@ -65,7 +64,7 @@ export default class AccountService {
           error: false,
           code: 201,
           data: { ...newAccount }
-        };
+        }
       } else {
         return {
           message: 'Error Creating Account User information required',

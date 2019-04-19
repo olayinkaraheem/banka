@@ -1,129 +1,341 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Banka- Open Account</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
     <!-- HEADER SECTION STARTS -->
     <header>
-        <a href="index.html"><span id="brand-name">banka</span></a>
-        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 224 224" style=" fill:#000000;" id="menu-icon">
-            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
-                <path d="M0,224v-224h224v224z" fill="none"></path>
-                <g fill="#ffffff">
-                    <g>
-                        <path d="M19.2,44.8c-2.30807,-0.03264 -4.45492,1.18 -5.61848,3.17359c-1.16356,1.99358 -1.16356,4.45924 0,6.45283c1.16356,1.99358 3.31041,3.20623 5.61848,3.17359h153.6c2.30807,0.03264 4.45492,-1.18 5.61848,-3.17359c1.16356,-1.99358 1.16356,-4.45924 0,-6.45283c-1.16356,-1.99358 -3.31041,-3.20623 -5.61848,-3.17359zM19.2,89.6c-2.30807,-0.03264 -4.45492,1.18 -5.61848,3.17359c-1.16356,1.99358 -1.16356,4.45924 0,6.45283c1.16356,1.99358 3.31041,3.20623 5.61848,3.17359h153.6c2.30807,0.03264 4.45492,-1.18 5.61848,-3.17359c1.16356,-1.99358 1.16356,-4.45924 0,-6.45283c-1.16356,-1.99358 -3.31041,-3.20623 -5.61848,-3.17359zM19.2,134.4c-2.30807,-0.03264 -4.45492,1.18 -5.61848,3.17359c-1.16356,1.99358 -1.16356,4.45924 0,6.45283c1.16356,1.99358 3.31041,3.20623 5.61848,3.17359h153.6c2.30807,0.03264 4.45492,-1.18 5.61848,-3.17359c1.16356,-1.99358 1.16356,-4.45924 0,-6.45283c-1.16356,-1.99358 -3.31041,-3.20623 -5.61848,-3.17359z"></path>           
-                    </g>
-                </g>
+      <a href="index.html"><span id="brand-name">banka</span></a>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        x="0px"
+        y="0px"
+        width="30"
+        height="30"
+        viewBox="0 0 224 224"
+        style=" fill:#000000;"
+        id="menu-icon"
+      >
+        <g
+          fill="none"
+          fill-rule="nonzero"
+          stroke="none"
+          stroke-width="1"
+          stroke-linecap="butt"
+          stroke-linejoin="miter"
+          stroke-miterlimit="10"
+          stroke-dasharray=""
+          stroke-dashoffset="0"
+          font-family="none"
+          font-weight="none"
+          font-size="none"
+          text-anchor="none"
+          style="mix-blend-mode: normal"
+        >
+          <path d="M0,224v-224h224v224z" fill="none"></path>
+          <g fill="#ffffff">
+            <g>
+              <path
+                d="M19.2,44.8c-2.30807,-0.03264 -4.45492,1.18 -5.61848,3.17359c-1.16356,1.99358 -1.16356,4.45924 0,6.45283c1.16356,1.99358 3.31041,3.20623 5.61848,3.17359h153.6c2.30807,0.03264 4.45492,-1.18 5.61848,-3.17359c1.16356,-1.99358 1.16356,-4.45924 0,-6.45283c-1.16356,-1.99358 -3.31041,-3.20623 -5.61848,-3.17359zM19.2,89.6c-2.30807,-0.03264 -4.45492,1.18 -5.61848,3.17359c-1.16356,1.99358 -1.16356,4.45924 0,6.45283c1.16356,1.99358 3.31041,3.20623 5.61848,3.17359h153.6c2.30807,0.03264 4.45492,-1.18 5.61848,-3.17359c1.16356,-1.99358 1.16356,-4.45924 0,-6.45283c-1.16356,-1.99358 -3.31041,-3.20623 -5.61848,-3.17359zM19.2,134.4c-2.30807,-0.03264 -4.45492,1.18 -5.61848,3.17359c-1.16356,1.99358 -1.16356,4.45924 0,6.45283c1.16356,1.99358 3.31041,3.20623 5.61848,3.17359h153.6c2.30807,0.03264 4.45492,-1.18 5.61848,-3.17359c1.16356,-1.99358 1.16356,-4.45924 0,-6.45283c-1.16356,-1.99358 -3.31041,-3.20623 -5.61848,-3.17359z"
+              ></path>
             </g>
-        </svg>
-        <nav class="navigation">
-            <ul>
-                <li><a href="login.html">Logout</a></li>
-                <!-- <li><a href="profile.html">Profile</a></li> -->
-            </ul>
-        </nav>
+          </g>
+        </g>
+      </svg>
+      <nav class="navigation">
+        <ul>
+          <li><a href="index.html">Logout</a></li>
+          <!-- <li><a href="profile.html">Profile</a></li> -->
+        </ul>
+      </nav>
     </header>
     <!-- **/ HEADER SECTION ENDS -->
     <!-- MAIN SECTION STARTS -->
     <main id="main">
-        <section id="form-container">
-            <h2 id="welcome-header">Open Bank Account</h2>
-            <form id="account-form" method="post" action="bank-account-dashboard.html">
-                <fieldset>
-                    <legend> Basic information </legend>
-                    <label for="firstname">First Name <span class="required">*</span>
-                        <input type="text" name="firstname" class="form-input-field" placeholder="Enter your firstname" required>
-                    </label>
-                    <label for="lastname">Lastname <span class="required">*</span>
-                        <input type="text" name="lastname" class="form-input-field" placeholder="Enter your lastame" required>
-                    </label>
-                    <input type="hidden" name="user-type" class="form-input-field" value="4">
-                    <label for="nationality">Nationality <span class="required">*</span>
-                        <input type="text" name="nationality" class="form-input-field" placeholder="e.g Nigerian" required>                
-                    </label>
-                    <label for="occupation">Occupation <span class="required">*</span>
-                        <input type="text" name="occupation" class="form-input-field" placeholder="e.g Farmer" required>                
-                    </label>
-                    <label for="marital-status">Marital Status <span class="required">*</span><br>
-                            <input type="radio" name="marital-status" value="single" id="single" required> <span class="radio-text"><label for="single">Single</label></span>
-                        <input type="radio" name="marital-status" value="married" id="married" required><span class="radio-text"><label for="married">Married</label></span>
-                        <input type="radio" name="marital-status" value="divorced" id="divorced" required><span class="radio-text"><label for="divorced">Divorced</label></span>        
-                    </label>
-                    <label for="gender">Gender <span class="required">*</span><br>
-                        <input type="radio" name="gender" id="male" class="" value="male" required> <span class="radio-text"><label for="male">Male</label></span>
-                        <input type="radio" name="gender" id="female" class="" value="female"required> <span class="radio-text"><label for="female">Female</label></span>
-                    </label>
-                </fieldset>
-                <fieldset>
-                    <legend> Contact information </legend>
-                    <label for="email">Email <span class="required">*</span>
-                        <input type="email" name="email" class="form-input-field" value="your_login_email@mail.com" required>
-                    </label>
-                    <label for="phone">Telephone <span class="required">*</span>
-                        <input type="tel" name="phone" class="form-input-field" placeholder="e.g +2348063188534" required>
-                    </label>
-                    <label for="res-address">Address <span class="required">*</span>
-                        <input type="text" name="res-address" class="form-input-field" placeholder="e.g 10, Davies street" required>
-                    </label>
-                    <label for="city">City <span class="required">*</span>
-                        <input type="text" name="city" class="form-input-field" placeholder="e.g ketu" required>
-                    </label>
-                    <label for="state">State <span class="required">*</span>
-                        <input type="text" name="state" class="form-input-field" placeholder="e.g Lagos" required>
-                    </label>
-                    <label for="country">Country <span class="required">*</span>
-                        <input type="text" name="country" class="form-input-field" placeholder="e.g Nigeria" required>
-                    </label>
-                </fieldset>
-                <fieldset>
-                    <legend> Account information </legend>
-                        <label for="account-type">Account Type <span class="required">*</span>
-                            <select name="account-type" class="form-input-field" required>
-                                <option value="">-- account type --</option>
-                                <option value="1">savings</option>
-                                <option value="2">current</option>
-                                <option value="3">fix deposit</option>
-                            </select>
-                        </label>
-                        <label for="card-option">Do you want a card for this account? <span class="required">*</span><br>
-                            <input type="radio" name="card-option" class="" value="1" required> <span class="radio-text">Yes</span>
-                            <input type="radio" name="card-option" class="" value="0" required> <span class="radio-text">No</span>
-                        </label>
-                </fieldset>
-                <fieldset>
-                    <legend> Next-of-kin information </legend>
-                    <label for="nok-firstname">Firstname <span class="required">*</span>
-                        <input type="text" name="nok-firstname" class="form-input-field" placeholder="Enter next of kin firstname" required>
-                    </label>
-                    <label for="nok-lastname">Lastname <span class="required">*</span>
-                        <input type="text" name="nok-lastname" class="form-input-field" placeholder="Enter next of kin lastname" required>
-                    </label>
-                    <label for="nok-email">Email <span class="required">*</span>
-                        <input type="email" name="nok-email" class="form-input-field" placeholder="Enter next of kin email address" required>
-                    </label>
-                    <label for="nok-phone">Telephone <span class="required">*</span>
-                        <input type="tel" name="nok-phone" class="form-input-field" placeholder="Enter next of kin phone" required>
-                    </label>
-                    <label for="nok-relationship">Relationship <span class="required">*</span>
-                        <input type="text" name="nok-relationship" class="form-input-field" placeholder="e.g cousin" required>
-                    </label>
-                </fieldset>
-                <button type="submit" class="btn btn-full-width large-btn">Submit</button>
-                <p>Already Have A Bank Account? <a href="bank-account-dashboard.html">Go to dashboard</a></p>
-            </form>
-        </section>
+      <section id="form-container">
+        <h2 id="welcome-header">Open Bank Account</h2>
+        <form
+          id="account-form"
+          method="post"
+          action="bank-account-dashboard.html"
+        >
+          <fieldset>
+            <legend>Basic information</legend>
+            <label for="firstname"
+              >First Name <span class="required">*</span>
+              <input
+                type="text"
+                name="firstname"
+                class="form-input-field"
+                placeholder="Enter your firstname"
+                required
+              />
+            </label>
+            <label for="lastname"
+              >Lastname <span class="required">*</span>
+              <input
+                type="text"
+                name="lastname"
+                class="form-input-field"
+                placeholder="Enter your lastame"
+                required
+              />
+            </label>
+            <input
+              type="hidden"
+              name="user-type"
+              class="form-input-field"
+              value="4"
+            />
+            <label for="nationality"
+              >Nationality <span class="required">*</span>
+              <input
+                type="text"
+                name="nationality"
+                class="form-input-field"
+                placeholder="e.g Nigerian"
+                required
+              />
+            </label>
+            <label for="occupation"
+              >Occupation <span class="required">*</span>
+              <input
+                type="text"
+                name="occupation"
+                class="form-input-field"
+                placeholder="e.g Farmer"
+                required
+              />
+            </label>
+            <label for="marital-status"
+              >Marital Status <span class="required">*</span><br />
+              <input
+                type="radio"
+                name="marital-status"
+                value="single"
+                id="single"
+                required
+              />
+              <span class="radio-text"><label for="single">Single</label></span>
+              <input
+                type="radio"
+                name="marital-status"
+                value="married"
+                id="married"
+                required
+              /><span class="radio-text"
+                ><label for="married">Married</label></span
+              >
+              <input
+                type="radio"
+                name="marital-status"
+                value="divorced"
+                id="divorced"
+                required
+              /><span class="radio-text"
+                ><label for="divorced">Divorced</label></span
+              >
+            </label>
+            <label for="gender"
+              >Gender <span class="required">*</span><br />
+              <input
+                type="radio"
+                name="gender"
+                id="male"
+                class=""
+                value="male"
+                required
+              />
+              <span class="radio-text"><label for="male">Male</label></span>
+              <input
+                type="radio"
+                name="gender"
+                id="female"
+                class=""
+                value="female"
+                required
+              />
+              <span class="radio-text"><label for="female">Female</label></span>
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend>Contact information</legend>
+            <label for="email"
+              >Email <span class="required">*</span>
+              <input
+                type="email"
+                name="email"
+                class="form-input-field"
+                value="your_login_email@mail.com"
+                required
+              />
+            </label>
+            <label for="phone"
+              >Telephone <span class="required">*</span>
+              <input
+                type="tel"
+                name="phone"
+                class="form-input-field"
+                placeholder="e.g +2348063188534"
+                required
+              />
+            </label>
+            <label for="res-address"
+              >Address <span class="required">*</span>
+              <input
+                type="text"
+                name="res-address"
+                class="form-input-field"
+                placeholder="e.g 10, Davies street"
+                required
+              />
+            </label>
+            <label for="city"
+              >City <span class="required">*</span>
+              <input
+                type="text"
+                name="city"
+                class="form-input-field"
+                placeholder="e.g ketu"
+                required
+              />
+            </label>
+            <label for="state"
+              >State <span class="required">*</span>
+              <input
+                type="text"
+                name="state"
+                class="form-input-field"
+                placeholder="e.g Lagos"
+                required
+              />
+            </label>
+            <label for="country"
+              >Country <span class="required">*</span>
+              <input
+                type="text"
+                name="country"
+                class="form-input-field"
+                placeholder="e.g Nigeria"
+                required
+              />
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend>Account information</legend>
+            <label for="account-type"
+              >Account Type <span class="required">*</span>
+              <select name="account-type" class="form-input-field" required>
+                <option value="">-- account type --</option>
+                <option value="1">savings</option>
+                <option value="2">current</option>
+                <option value="3">fix deposit</option>
+              </select>
+            </label>
+            <label for="card-option"
+              >Do you want a card for this account?
+              <span class="required">*</span><br />
+              <input
+                type="radio"
+                name="card-option"
+                class=""
+                value="1"
+                required
+              />
+              <span class="radio-text">Yes</span>
+              <input
+                type="radio"
+                name="card-option"
+                class=""
+                value="0"
+                required
+              />
+              <span class="radio-text">No</span>
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend>Next-of-kin information</legend>
+            <label for="nok-firstname"
+              >Firstname <span class="required">*</span>
+              <input
+                type="text"
+                name="nok-firstname"
+                class="form-input-field"
+                placeholder="Enter next of kin firstname"
+                required
+              />
+            </label>
+            <label for="nok-lastname"
+              >Lastname <span class="required">*</span>
+              <input
+                type="text"
+                name="nok-lastname"
+                class="form-input-field"
+                placeholder="Enter next of kin lastname"
+                required
+              />
+            </label>
+            <label for="nok-email"
+              >Email <span class="required">*</span>
+              <input
+                type="email"
+                name="nok-email"
+                class="form-input-field"
+                placeholder="Enter next of kin email address"
+                required
+              />
+            </label>
+            <label for="nok-phone"
+              >Telephone <span class="required">*</span>
+              <input
+                type="tel"
+                name="nok-phone"
+                class="form-input-field"
+                placeholder="Enter next of kin phone"
+                required
+              />
+            </label>
+            <label for="nok-relationship"
+              >Relationship <span class="required">*</span>
+              <input
+                type="text"
+                name="nok-relationship"
+                class="form-input-field"
+                placeholder="e.g cousin"
+                required
+              />
+            </label>
+          </fieldset>
+          <button type="submit" class="btn btn-full-width large-btn">
+            Submit
+          </button>
+          <p>
+            Already Have A Bank Account?
+            <a href="bank-account-dashboard.html">Go to dashboard</a>
+          </p>
+        </form>
+      </section>
     </main>
     <!-- **/ MAIN SECTION ENDS -->
     <!-- FOOTER SECTION STARTS -->
     <footer>
-        <p>&copy; 2019. Built and Designed With <span style="color:red">&#9829;</span> By Olayinka.</p>
+      <p>
+        &copy; 2019. Built and Designed With
+        <span style="color:red">&#9829;</span> By Olayinka.
+      </p>
     </footer>
     <!-- **/ FOOTER SECTION ENDS -->
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>
